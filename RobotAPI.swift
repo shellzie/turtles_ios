@@ -13,11 +13,13 @@ let session: URLSession = {
     return URLSession(configuration: config)
 }()
 
+
 struct RobotAPI {
     
     private static let baseURLString = "https://secret-brushlands-1127.herokuapp.com"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
+    
     static func sendPostCommand(parameters: [String:String]?) {
  
         let components = NSURLComponents(string: baseURLString)!
@@ -34,9 +36,9 @@ struct RobotAPI {
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
         
-        let task = session.dataTask(with: request as URLRequest) {
-            (data, response, error) -> Void in
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             print("++++++++++++++++++ Response is \(response) ")
+            print("++++++++++++++++++ Error is \(error) ")
         }
         task.resume()
     }

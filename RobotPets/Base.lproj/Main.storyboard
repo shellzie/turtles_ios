@@ -36,6 +36,9 @@
                                 <state key="normal" title="Left">
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnLeftWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17o-U3-fCs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbQ-qa-fWz">
                                 <frame key="frameInset" minX="170" minY="390" width="150" height="80"/>
@@ -43,6 +46,9 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="turnRightWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxX-HN-Jc8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxP-Xp-xgS">
                                 <frame key="frameInset" minX="53" minY="478" width="214" height="68"/>
@@ -50,6 +56,9 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Reverse"/>
+                                <connections>
+                                    <action selector="moveReverseWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4W-HF-L3Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
