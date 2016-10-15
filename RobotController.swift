@@ -12,18 +12,18 @@ import Foundation
 class RobotViewController: UIViewController {
     
     @IBAction func moveForward(sender: UIButton) {
-        RobotAPI.sendPostCommand(parameters:["direction":"forward", "amount": "8"])
+        RobotAPI.sendPostCommand(parameters:["command":"forward", "amount": "8"])
     }
     
     @IBAction func moveReverse(sender: UIButton){
-        RobotAPI.sendPostCommand(parameters:["direction":"reverse", "amount": "8"])
+        RobotAPI.sendPostCommand(parameters:["command":"reverse", "amount": "8"])
     }
     
     @IBAction func turnLeft(sender: UIButton){
-        RobotAPI.sendPostCommand(parameters:["direction":"left", "amount": "8"])
+        RobotAPI.sendPostCommand(parameters:["command":"left", "amount": "8"])
     }
     
     @IBAction func turnRight(sender: UIButton){
-        RobotAPI.sendPostCommand(parameters:["direction":"right", "amount": "8"])
+        RobotAPI.sendPostCommand(parameters:["command":"right", "amount": "8"])
     }
 }
