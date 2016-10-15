@@ -17,8 +17,8 @@ struct RobotAPI {
     
     private static let baseURLString = "https://secret-brushlands-1127.herokuapp.com"
     
-    //called from RobotViewController
-    static func sendCommand(method: Method, parameters: [String:String]?) {
+    //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
+    static func sendPostCommand(parameters: [String:String]?) {
  
         let components = NSURLComponents(string: baseURLString)!
         var queryItems = [NSURLQueryItem]()
@@ -31,7 +31,9 @@ struct RobotAPI {
         }
         components.queryItems = queryItems as [URLQueryItem]?
         let url = components.url! as NSURL
-        let request = NSURLRequest(url: url as URL)
+        let request = NSMutableURLRequest(url: url as URL)
+        request.httpMethod = "POST"
+        
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) -> Void in
             print("++++++++++++++++++ Response is \(response) ")
