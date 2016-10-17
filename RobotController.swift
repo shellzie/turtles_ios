@@ -15,15 +15,20 @@ class RobotViewController: UIViewController {
         RobotAPI.sendPostCommand(parameters:["command":"forward", "amount": "8"])
     }
     
-    @IBAction func moveReverse(sender: UIButton){
+    @IBAction func moveReverse(sender: UIButton) {
         RobotAPI.sendPostCommand(parameters:["command":"reverse", "amount": "8"])
     }
     
-    @IBAction func turnLeft(sender: UIButton){
+    @IBAction func turnLeft(sender: UIButton) {
         RobotAPI.sendPostCommand(parameters:["command":"left", "amount": "8"])
     }
     
-    @IBAction func turnRight(sender: UIButton){
+    @IBAction func turnRight(sender: UIButton) {
         RobotAPI.sendPostCommand(parameters:["command":"right", "amount": "8"])
     }
+    
+    @IBAction func getNextFrame(sender: UIButton) {
+        RobotAPI.getNextPhoto()
+    }
+
 }

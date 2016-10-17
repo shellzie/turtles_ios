@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJZ-xw-Gs9">
@@ -69,15 +69,37 @@
                                     <constraint firstAttribute="width" constant="328" id="t7l-fU-Xe1"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-oe-K4z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample_pic" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-oe-K4z">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="g6U-zF-7fb"/>
                                     <constraint firstAttribute="height" constant="128" id="yO2-Sn-0bI"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwS-i3-6Qd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Re1-ax-eBZ"/>
+                                    <constraint firstAttribute="width" constant="108" id="sHr-5u-Zge"/>
+                                </constraints>
+                                <state key="normal" title="Get Next Frame"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getNextFrameWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbL-ye-eWL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LwS-i3-6Qd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Uu-Ox-aIl"/>
+                            <constraint firstItem="LwS-i3-6Qd" firstAttribute="top" secondItem="i1c-oe-K4z" secondAttribute="bottom" constant="8" id="fjt-2T-2hY"/>
                             <constraint firstItem="i1c-oe-K4z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="kTQ-LZ-WYh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aJZ-xw-Gs9" secondAttribute="bottom" constant="47" id="krI-rv-MXk"/>
                             <constraint firstItem="i1c-oe-K4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tA5-0V-dme"/>
@@ -90,4 +112,7 @@
             <point key="canvasLocation" x="-412.5" y="36.971830985915496"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample_pic" width="1200" height="630"/>
+    </resources>
 </document>

@@ -13,10 +13,14 @@ let session: URLSession = {
     return URLSession(configuration: config)
 }()
 
+//public typealias DataFromURLCompletionClosure = (URLResponse?, NSData?) -> Void
+
 
 struct RobotAPI {
     
     private static let baseURLString = "https://secret-brushlands-1127.herokuapp.com"
+    
+//    public typealias DataFromURLCompletionClosure = (URLResponse?, NSData?) -> Void
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
     
@@ -43,5 +47,24 @@ struct RobotAPI {
         task.resume()
     }
     
-    
+    static func getNextPhoto() {
+        
+//        var queue = NSOperationQueue(). session object we used above did not need a queue instance
+        //let urlString = RobotAPI.baseURLString + "?photo=true"  uncomment this line when alex builds url for camera image
+        
+        let urlString = "http://shellzie.com/app/images/kids.jpeg"
+        
+        //if let encodeString = urlString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+            if let url = NSURL(string: urlString) {
+                let request = NSMutableURLRequest(url: url as URL)
+                request.httpMethod = "GET"
+                let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+                    print("++++++++++++++++++ Response is \(response) ")
+                    print("++++++++++++++++++ Error is \(error) ")
+                }
+                task.resume()
+            }
+//        }
+    }
+
 }
