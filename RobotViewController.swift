@@ -13,7 +13,10 @@ class RobotViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     var store: PhotoManager!
+    @IBOutlet var stopCamera: UIButton?
+    @IBOutlet var hideCamera: UIButton?
     
+    private var myTimer: Timer?
     
     @IBAction func moveForward(sender: UIButton) {
         API.sendPostCommand(parameters:["command":"forward", "amount": "8"])
@@ -36,22 +39,18 @@ class RobotViewController: UIViewController {
         print("next frame button was clicked!")
     }
     
+    @IBAction func stopCamera(sender: UIButton) {
+        myTimer?.invalidate()
+        myTimer = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPhotoPolling()
-    
     }
     
-    /*
-    class func scheduledTimer(timeInterval ti: TimeInterval,
-                              target aTarget: Any,
-                              selector aSelector: Selector,
-                              userInfo: Any?,
-                              repeats yesOrNo: Bool) -> Timer
-    */
-
     private func setupPhotoPolling() {
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
+        myTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
     }
     
     func getNextFrame() {
