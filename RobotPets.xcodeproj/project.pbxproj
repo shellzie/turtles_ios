@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B1B9E5F1DB56ACA00CF0A63 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B9E5E1DB56ACA00CF0A63 /* Photo.swift */; };
 		4B1B9E831DB5C82100CF0A63 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B9E821DB5C82100CF0A63 /* PhotoStore.swift */; };
-		4B1D2C001DB29BF70032822D /* RobotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D2BFF1DB29BF70032822D /* RobotAPI.swift */; };
+		4B1D2C001DB29BF70032822D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D2BFF1DB29BF70032822D /* API.swift */; };
 		4B44AE581DA9E1CE00CE8448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AE571DA9E1CE00CE8448 /* AppDelegate.swift */; };
 		4B44AE5D1DA9E1CE00CE8448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B44AE5B1DA9E1CE00CE8448 /* Main.storyboard */; };
 		4B44AE5F1DA9E1CE00CE8448 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B44AE5E1DA9E1CE00CE8448 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		4B1B9E5E1DB56ACA00CF0A63 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4B1B9E821DB5C82100CF0A63 /* PhotoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
-		4B1D2BFF1DB29BF70032822D /* RobotAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RobotAPI.swift; path = ../RobotAPI.swift; sourceTree = "<group>"; };
+		4B1D2BFF1DB29BF70032822D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../API.swift; sourceTree = "<group>"; };
 		4B44AE541DA9E1CE00CE8448 /* RobotPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B44AE571DA9E1CE00CE8448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B44AE5C1DA9E1CE00CE8448 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 				4B44AE571DA9E1CE00CE8448 /* AppDelegate.swift */,
 				4B1B9E5E1DB56ACA00CF0A63 /* Photo.swift */,
 				4B1B9E821DB5C82100CF0A63 /* PhotoStore.swift */,
-				4B1D2BFF1DB29BF70032822D /* RobotAPI.swift */,
+				4B1D2BFF1DB29BF70032822D /* API.swift */,
 				4B44AE691DA9E6DA00CE8448 /* RobotViewController.swift */,
 				4B44AE5E1DA9E1CE00CE8448 /* Assets.xcassets */,
 				4B44AE601DA9E1CE00CE8448 /* LaunchScreen.storyboard */,
@@ -148,7 +148,7 @@
 				4B1B9E831DB5C82100CF0A63 /* PhotoStore.swift in Sources */,
 				4B1B9E5F1DB56ACA00CF0A63 /* Photo.swift in Sources */,
 				4B44AE581DA9E1CE00CE8448 /* AppDelegate.swift in Sources */,
-				4B1D2C001DB29BF70032822D /* RobotAPI.swift in Sources */,
+				4B1D2C001DB29BF70032822D /* API.swift in Sources */,
 				4B44AE6A1DA9E6DA00CE8448 /* RobotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,15 +9,6 @@
 import Foundation
 import UIKit
 
-//enum ImageResult {
-//    case Success(UIImage)
-//    case Failure(Error)
-//}
-//
-//enum PhotoError: Error {
-//    case ImageCreationError
-//}
-
 class PhotoStore {
     
     var lastPhoto: UIImage?
@@ -27,13 +18,14 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
-    private static func createPhotoObj() -> Photo? {
-        let dateTaken = NSDate() //current time
-        return Photo(dateTaken: dateTaken)
-    }
+    //can add this method back when we set up polling maybe?
+//    private static func createPhotoObj() -> Photo? {
+//        let dateTaken = NSDate() //current time
+//        return Photo(dateTaken: dateTaken)
+//    }
 
     func fetchRecentPhoto() {
-        let url = RobotAPI.cameraURL()
+        let url = API.cameraURL()
         let request = NSMutableURLRequest(url: url as! URL)
         request.httpMethod = "GET"
         
@@ -41,9 +33,7 @@ class PhotoStore {
             print("++++++++++++++++++ Response is \(response) ")
             print("++++++++++++++++++ Error is \(error) ")
             print("++++++++++++++++++ data is \(data) ")
-
             self.lastPhoto = UIImage(data: data!)
-            
         }
         task.resume()
     }

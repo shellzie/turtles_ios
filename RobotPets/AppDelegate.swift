@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //called from AppDelegate when app first launches
         
+        
+        //give top level controller an instance of PhotoStore in AppDelegate in orer to call fetchRecentPhoto() when app initially loads.
         let robotViewController = window!.rootViewController as! RobotViewController
         robotViewController.store = PhotoStore()
         
