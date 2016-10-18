@@ -12,7 +12,7 @@ import Foundation
 class RobotViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    var store: PhotoStore!
+    var store: PhotoManager!
     
     
     @IBAction func moveForward(sender: UIButton) {
@@ -38,6 +38,24 @@ class RobotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPhotoPolling()
+    
+    }
+    
+    /*
+    class func scheduledTimer(timeInterval ti: TimeInterval,
+                              target aTarget: Any,
+                              selector aSelector: Selector,
+                              userInfo: Any?,
+                              repeats yesOrNo: Bool) -> Timer
+    */
+
+    private func setupPhotoPolling() {
+        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
+    }
+    
+    func getNextFrame() {
+        print("+++++++++++ getNextFrame() was called ++++++++++++   ")
         store.fetchRecentPhoto()
         OperationQueue.main.addOperation {
             self.imageView.image = self.store.lastPhoto

@@ -1,5 +1,5 @@
 //
-//  PhotoStore.swift
+//  PhotoManager.swift
 //  RobotPets
 //
 //  Created by dev on 10/17/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PhotoStore {
+class PhotoManager {
     
     var lastPhoto: UIImage?
     
@@ -24,7 +24,7 @@ class PhotoStore {
 //        return Photo(dateTaken: dateTaken)
 //    }
 
-    func fetchRecentPhoto() {
+func fetchRecentPhoto() {
         let url = API.cameraURL()
         let request = NSMutableURLRequest(url: url as! URL)
         request.httpMethod = "GET"
