@@ -11,6 +11,10 @@ import Foundation
 
 class RobotViewController: UIViewController {
     
+    @IBOutlet var imageView: UIImageView!
+    var store: PhotoStore!
+    
+    
     @IBAction func moveForward(sender: UIButton) {
         RobotAPI.sendPostCommand(parameters:["command":"forward", "amount": "8"])
     }
@@ -28,7 +32,17 @@ class RobotViewController: UIViewController {
     }
     
     @IBAction func getNextFrame(sender: UIButton) {
-        RobotAPI.getNextPhoto()
+        //RobotAPI.getNextPhoto()
+        print("next frame button was clicked!")
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        store.fetchRecentPhoto()
+//        self.imageView.image = store.lastPhoto
+        OperationQueue.main.addOperation {
+            self.imageView.image = self.store.lastPhoto
+        }
+    }
 }
