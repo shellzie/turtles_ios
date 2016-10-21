@@ -15,23 +15,24 @@ class RobotViewController: UIViewController {
     var store: PhotoManager!
     @IBOutlet var stopCamera: UIButton?
     @IBOutlet var hideCamera: UIButton?
+    @IBOutlet var saveImage: UIButton?
     
     private var myTimer: Timer?
     
     @IBAction func moveForward(sender: UIButton) {
-        API.sendPostCommand(parameters:["command":"forward", "amount": "8"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:forward"])
     }
     
     @IBAction func moveReverse(sender: UIButton) {
-        API.sendPostCommand(parameters:["command":"reverse", "amount": "8"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:reverse"])
     }
     
     @IBAction func turnLeft(sender: UIButton) {
-        API.sendPostCommand(parameters:["command":"left", "amount": "8"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:left"])
     }
     
     @IBAction func turnRight(sender: UIButton) {
-        API.sendPostCommand(parameters:["command":"right", "amount": "8"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:right"])
     }
     
     @IBAction func getNextFrame(sender: UIButton) {
@@ -46,7 +47,7 @@ class RobotViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPhotoPolling()
+//        setupPhotoPolling()
     }
     
     private func setupPhotoPolling() {
@@ -59,5 +60,9 @@ class RobotViewController: UIViewController {
         OperationQueue.main.addOperation {
             self.imageView.image = self.store.lastPhoto
         }
+    }
+    
+    @IBAction func saveImage(sender: UIButton) {
+    
     }
 }
