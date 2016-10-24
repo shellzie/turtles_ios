@@ -18,6 +18,7 @@ class RobotViewController: UIViewController {
     @IBOutlet var saveImage: UIButton?
     
     private var myTimer: Timer?
+    private var timer: DispatchSourceTimer!
     
     @IBAction func moveForward(sender: UIButton) {
         API.sendPostCommand(parameters:["r_cmd":"Basics:forward"])
@@ -48,21 +49,51 @@ class RobotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setupPhotoPolling()
+//        backgroundFetch()
+//        Timer.scheduledTimer(withTimeInterval: 5, repeats: true, )
+        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.backgroundFetch), userInfo: nil, repeats: true)
+
     }
     
-    private func setupPhotoPolling() {
-        myTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
-    }
-    
-    func getNextFrame() {
-        print("+++++++++++ getNextFrame() was called ++++++++++++   ")
-        store.fetchRecentPhoto()
-        OperationQueue.main.addOperation {
-            self.imageView.image = self.store.lastPhoto
+    func backgroundFetch() {
+        let queue = DispatchQueue.global(qos: DispatchQoS.utility.qosClass)
+        queue.async {
+            self.getNextFrame()
+            
+            DispatchQueue.main.async(execute: {
+                self.imageView.image = self.store.lastPhoto
+            })
+//            DispatchQueue.main.async(deadline: DispatchTime.now() + .seconds(5)) {
+//                self.imageView.image = self.store.lastPhoto
+//            }
         }
     }
     
-    @IBAction func saveImage(sender: UIButton) {
     
+
+//    func delay(delay: Double, closure: ()->()) {
+//        dispatch_after(dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), delay * NSEC_PER_SEC), DispatchQueue.main, closure)
+//    }
+//    
+    
+    
+    func setupPhotoPolling() {
+    
+        let myTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
+        RunLoop.current.add(myTimer, forMode: RunLoopMode.init(rawValue: "photo"))
+//        RunLoop.current.add(timer, forMode: RunLoop.current.currentMode)
+    
+        
     }
+ 
+    func getNextFrame() {
+        print("+++++++++++ getNextFrame() was called ++++++++++++")
+        self.store.fetchRecentPhoto()
+        
+//        OperationQueue.main.addOperation {
+//            self.imageView.image = self.store.lastPhoto
+//        }
+    }
+    
+
 }

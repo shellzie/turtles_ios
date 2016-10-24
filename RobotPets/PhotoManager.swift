@@ -24,7 +24,8 @@ class PhotoManager {
 //        return Photo(dateTaken: dateTaken)
 //    }
 
-func fetchRecentPhoto() {
+    @objc public func fetchRecentPhoto() {
+        print("+++++ FETCH RECENT PHOTO CALLED+++++++++++++")
         let url = API.cameraURL()
         let request = NSMutableURLRequest(url: url as! URL)
         request.httpMethod = "GET"
