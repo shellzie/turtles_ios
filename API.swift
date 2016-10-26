@@ -47,14 +47,15 @@ struct API {
         request.httpMethod = "POST"
         
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
-            print("++++++++++++++++++ Response is \(response) ")
-            print("++++++++++++++++++ Error is \(error) ")
+//            print("++++++++++++++++++ Response is \(response) ")
+//            print("++++++++++++++++++ Error is \(error) ")
         }
         task.resume()
     }
     
     static func cameraURL() -> NSURL? {
-        let urlString = "http://shellzie.com/app/images/kids.jpeg"
+        let urlString = "http://benbot.local/motion/robotView.jpg"
+//        let urlString = "http://shellzie.com/app/images/kids.jpeg"
         let url = NSURL(string: urlString)
         return url
     }

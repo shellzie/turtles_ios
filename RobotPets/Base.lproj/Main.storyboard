@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,87 +74,18 @@
                                     <constraint firstAttribute="width" constant="240" id="g6U-zF-7fb"/>
                                     <constraint firstAttribute="height" constant="128" id="yO2-Sn-0bI"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ho-Ih-4Ml">
-                                <frame key="frameInset" minX="222" minY="193" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Stop Camera"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layout.borderWidth" value="5"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layout.borderColor">
-                                        <color key="value" red="0.9429418103448276" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="stopCameraWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnt-5Q-a5e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-vG-ml1">
-                                <frame key="frameInset" minX="4" minY="191" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Hide Camera"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ls-WD-9b0">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="KQn-HW-a1u"/>
-                                    <constraint firstAttribute="height" constant="30" id="O8N-oU-5Nd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Save Image"/>
-                                <connections>
-                                    <action selector="saveImageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIN-LN-KHZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwS-i3-6Qd">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Re1-ax-eBZ"/>
-                                    <constraint firstAttribute="width" constant="108" id="sHr-5u-Zge"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Get Next Frame"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="5"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="getNextFrameWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbL-ye-eWL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LwS-i3-6Qd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Uu-Ox-aIl"/>
-                            <constraint firstItem="8ls-WD-9b0" firstAttribute="top" secondItem="i1c-oe-K4z" secondAttribute="bottom" constant="8" id="0iP-pM-I9C"/>
-                            <constraint firstItem="LwS-i3-6Qd" firstAttribute="top" secondItem="i1c-oe-K4z" secondAttribute="bottom" constant="8" id="fjt-2T-2hY"/>
                             <constraint firstItem="i1c-oe-K4z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="kTQ-LZ-WYh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aJZ-xw-Gs9" secondAttribute="bottom" constant="47" id="krI-rv-MXk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8ls-WD-9b0" secondAttribute="trailing" constant="66" id="o79-Xj-ZRS"/>
                             <constraint firstItem="i1c-oe-K4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tA5-0V-dme"/>
                             <constraint firstItem="aJZ-xw-Gs9" firstAttribute="centerX" secondItem="i1c-oe-K4z" secondAttribute="centerX" id="wrE-6H-Y9p"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hideCamera" destination="Oyo-vG-ml1" id="cHp-Ad-ESE"/>
                         <outlet property="imageView" destination="i1c-oe-K4z" id="Yia-gr-QRY"/>
-                        <outlet property="saveImage" destination="8ls-WD-9b0" id="ogf-Eq-WFx"/>
-                        <outlet property="stopCamera" destination="8Ho-Ih-4Ml" id="Goy-cf-11c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
