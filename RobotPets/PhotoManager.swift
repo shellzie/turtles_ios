@@ -29,12 +29,18 @@ class PhotoManager {
         let url = API.cameraURL()
         let request = NSMutableURLRequest(url: url as! URL)
         request.httpMethod = "GET"
-        
+    
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             print("++++++++++++++++++ Response is \(response) ")
             print("++++++++++++++++++ Error is \(error) ")
             print("++++++++++++++++++ data is \(data) ")
-            self.lastPhoto = UIImage(data: data!)
+            if data != nil {
+                self.lastPhoto = UIImage(data: data!)
+            }
+            else {
+                print("could not connect. check connection")
+            }
+            
         }
         task.resume()
     }
