@@ -30,6 +30,9 @@
                                     <constraint firstAttribute="height" constant="28" id="Umr-zi-o4X"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="disk"/>
+                                <connections>
+                                    <action selector="saveImageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rE-5a-xgD"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJZ-xw-Gs9">
                                 <subviews>

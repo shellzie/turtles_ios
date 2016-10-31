@@ -9,19 +9,10 @@
 import Foundation
 import UIKit
 
-
-//enum PhotosResult {
-//    case Success(Photo)
-//    case Failure(Error)
-//}
-
 let session: URLSession = {
     let config = URLSessionConfiguration.default
     return URLSession(configuration: config)
 }()
-
-//public typealias DataFromURLCompletionClosure = (URLResponse?, NSData?) -> Void
-
 
 struct API {
     

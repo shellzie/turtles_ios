@@ -12,11 +12,11 @@ import Foundation
 class RobotViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
+    //@IBOutlet var saveImage: UIButton?
     var store: PhotoManager!
     
 //    @IBOutlet var stopCamera: UIButton?
 //    @IBOutlet var hideCamera: UIButton?
-//    @IBOutlet var saveImage: UIButton?
     
     private var myTimer: Timer?
     private var timer: DispatchSourceTimer!
@@ -37,6 +37,24 @@ class RobotViewController: UIViewController {
         API.sendPostCommand(parameters:["r_cmd":"Basics:right"])
     }
 
+    @IBAction func saveImage(sender: UIButton) {
+        //freeze camera
+        myTimer?.invalidate()
+        myTimer = nil
+        
+        //write image
+        let dispatchQ = DispatchQueue.global(qos: DispatchQoS.background.qosClass)
+        dispatchQ.async {
+            UIImageWriteToSavedPhotosAlbum(self.imageView.image!, nil, nil, nil)
+        }
+        
+        //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+         //   UIImageWriteToSavedPhotosAlbum(img.image, nil, nil, nil);
+        //});
+        
+        //toggle the "resume" button
+        
+    }
     
 //    @IBAction func stopCamera(sender: UIButton) {
 //        myTimer?.invalidate()
