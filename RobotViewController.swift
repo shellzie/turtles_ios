@@ -23,7 +23,7 @@ class RobotViewController: UIViewController {
     private var timer: DispatchSourceTimer!
     
 //    private let myFrame = CGRect.init(x: 40, y: 57, width: 240, height: 128)
-    private let flashView = UIView(frame: CGRect.init(x: 20, y: 27, width: 240, height: 128))
+    private let flashView = UIView(frame: CGRect.init(x: 0, y: -27, width: 240, height: 185))
 
     private let systemSoundID: SystemSoundID = 1108
 
@@ -49,11 +49,12 @@ class RobotViewController: UIViewController {
         if ((self.imageView.image) != nil) {
             
             //animate flash confirmation
-            UIView.animate(withDuration: 0.01, delay: 0, options: [], animations: {
+            //use duratino of 0.01 when frame size is fixed
+            UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
                 self.flashView.alpha = 1
             }, completion: {
                 (finished: Bool) -> Void in
-                 UIView.animate(withDuration: 0.01, delay: 0, options: [], animations: {
+                 UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
                         self.flashView.alpha = 0
                     }, completion: nil)
             })
