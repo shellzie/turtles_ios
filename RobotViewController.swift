@@ -38,21 +38,28 @@ class RobotViewController: UIViewController {
     }
 
     @IBAction func saveImage(sender: UIButton) {
-        //freeze camera
-        myTimer?.invalidate()
-        myTimer = nil
         
-        //write image
-        let dispatchQ = DispatchQueue.global(qos: DispatchQoS.background.qosClass)
-        dispatchQ.async {
-            UIImageWriteToSavedPhotosAlbum(self.imageView.image!, nil, nil, nil)
+        if ((self.imageView.image) != nil) {
+            
+            //stop camera from polling new images
+            myTimer?.invalidate()
+            myTimer = nil
+            
+            //write image
+            let dispatchQ = DispatchQueue.global(qos: DispatchQoS.background.qosClass)
+            dispatchQ.async {
+                UIImageWriteToSavedPhotosAlbum(self.imageView.image!, nil, nil, nil)
+            }
+            
+            //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //   UIImageWriteToSavedPhotosAlbum(img.image, nil, nil, nil);
+            //});
+            
+            //toggle the "resume" button
+            
         }
         
-        //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-         //   UIImageWriteToSavedPhotosAlbum(img.image, nil, nil, nil);
-        //});
-        
-        //toggle the "resume" button
+
         
     }
     
