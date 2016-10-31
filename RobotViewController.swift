@@ -23,7 +23,7 @@ class RobotViewController: UIViewController {
     private var timer: DispatchSourceTimer!
     
 //    private let myFrame = CGRect.init(x: 40, y: 57, width: 240, height: 128)
-    private let flashView = UIView(frame: CGRect.init(x: 0, y: -27, width: 240, height: 185))
+    private let flashView = UIView(frame: CGRect.init(x: 0, y: -4, width: 245, height: 184))
 
     private let systemSoundID: SystemSoundID = 1108
 

@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_image" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-oe-K4z">
-                                <rect key="frame" x="40" y="57" width="240" height="128"/>
+                                <rect key="frame" x="37.5" y="57" width="245" height="175"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="g6U-zF-7fb"/>
-                                    <constraint firstAttribute="height" constant="128" id="yO2-Sn-0bI"/>
+                                    <constraint firstAttribute="width" constant="245" id="g6U-zF-7fb"/>
+                                    <constraint firstAttribute="height" constant="175" id="yO2-Sn-0bI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXr-MB-yfv">
-                                <rect key="frame" x="146" y="229" width="28" height="28"/>
+                                <rect key="frame" x="146" y="276" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="CWz-V5-OqS"/>
                                     <constraint firstAttribute="height" constant="28" id="Umr-zi-o4X"/>
