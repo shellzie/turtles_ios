@@ -34,7 +34,7 @@ class PhotoManager {
             print("++++++++++++++++++ Response is \(response) ")
             print("++++++++++++++++++ Error is \(error) ")
             print("++++++++++++++++++ data is \(data) ")
-            if data != nil {
+            if data != nil {    
                 self.lastPhoto = UIImage(data: data!)
             }
             else {
