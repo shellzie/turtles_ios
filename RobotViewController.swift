@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import AVFoundation
 
 class RobotViewController: UIViewController {
     
@@ -20,6 +21,12 @@ class RobotViewController: UIViewController {
     
     private var myTimer: Timer?
     private var timer: DispatchSourceTimer!
+    
+//    private let myFrame = CGRect.init(x: 40, y: 57, width: 240, height: 128)
+    private let flashView = UIView(frame: CGRect.init(x: 20, y: 27, width: 240, height: 128))
+
+    private let systemSoundID: SystemSoundID = 1108
+
     
     @IBAction func moveForward(sender: UIButton) {
         API.sendPostCommand(parameters:["r_cmd":"Basics:forward"])
@@ -41,26 +48,25 @@ class RobotViewController: UIViewController {
         
         if ((self.imageView.image) != nil) {
             
-            //stop camera from polling new images
-            myTimer?.invalidate()
-            myTimer = nil
+            //animate flash confirmation
+            UIView.animate(withDuration: 0.01, delay: 0, options: [], animations: {
+                self.flashView.alpha = 1
+            }, completion: {
+                (finished: Bool) -> Void in
+                 UIView.animate(withDuration: 0.01, delay: 0, options: [], animations: {
+                        self.flashView.alpha = 0
+                    }, completion: nil)
+            })
             
-            //write image
+            //play shutter sound
+            AudioServicesPlaySystemSound (systemSoundID)
+            
+            //write image to PhotoLibrary
             let dispatchQ = DispatchQueue.global(qos: DispatchQoS.background.qosClass)
             dispatchQ.async {
                 UIImageWriteToSavedPhotosAlbum(self.imageView.image!, nil, nil, nil)
             }
-            
-            //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            //   UIImageWriteToSavedPhotosAlbum(img.image, nil, nil, nil);
-            //});
-            
-            //toggle the "resume" button
-            
         }
-        
-
-        
     }
     
 //    @IBAction func stopCamera(sender: UIButton) {
@@ -69,13 +75,23 @@ class RobotViewController: UIViewController {
 //    }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        setupAnimationLayer()
+        
 //        setupPhotoPolling()
 //        backgroundFetch()
 //        Timer.scheduledTimer(withTimeInterval: 5, repeats: true, )
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(RobotViewController.backgroundFetch), userInfo: nil, repeats: true)
 
     }
+    
+    func setupAnimationLayer() {
+        flashView.alpha = 0
+        flashView.backgroundColor = UIColor.black
+        imageView.addSubview(flashView)
+    }
+    
     
     func backgroundFetch() {
         let queue = DispatchQueue.global(qos: DispatchQoS.utility.qosClass)

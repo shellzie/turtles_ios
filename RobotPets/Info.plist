@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Saving user selected images from the camera on user&apos;s Robot Pet to the user&apos;s PhotoLibrary</string>
+	<string>Save user selected images to PhotoLibrary</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
