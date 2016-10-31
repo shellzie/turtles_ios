@@ -49,12 +49,11 @@ class RobotViewController: UIViewController {
         if ((self.imageView.image) != nil) {
             
             //animate flash confirmation
-            //use duratino of 0.01 when frame size is fixed
-            UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+            UIView.animate(withDuration: 0.08, delay: 0, options: [], animations: {
                 self.flashView.alpha = 1
             }, completion: {
                 (finished: Bool) -> Void in
-                 UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+                 UIView.animate(withDuration: 0.08, delay: 0, options: [], animations: {
                         self.flashView.alpha = 0
                     }, completion: nil)
             })
