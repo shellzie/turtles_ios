@@ -16,9 +16,7 @@ class RobotViewController: UIViewController {
     var store: PhotoManager!
     private var myTimer: Timer?
     private var timer: DispatchSourceTimer!
-    
-//    private let myFrame = CGRect.init(x: 40, y: 57, width: 240, height: 128)
-    private let flashView = UIView(frame: CGRect.init(x: 0, y: -6, width: 245, height: 188))
+    private var flashView = UIView()
     private let systemSoundID: SystemSoundID = 1108
 
     
@@ -81,6 +79,8 @@ class RobotViewController: UIViewController {
     }
     
     func setupAnimationLayer() {
+        
+        flashView = UIView(frame: CGRect.init(x: 0, y: -6, width: imageView.frame.width, height: imageView.frame.height))
         flashView.alpha = 0
         flashView.backgroundColor = UIColor.black
         imageView.addSubview(flashView)
