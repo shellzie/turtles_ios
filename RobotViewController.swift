@@ -13,18 +13,12 @@ import AVFoundation
 class RobotViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    //@IBOutlet var saveImage: UIButton?
     var store: PhotoManager!
-    
-//    @IBOutlet var stopCamera: UIButton?
-//    @IBOutlet var hideCamera: UIButton?
-    
     private var myTimer: Timer?
     private var timer: DispatchSourceTimer!
     
 //    private let myFrame = CGRect.init(x: 40, y: 57, width: 240, height: 128)
-    private let flashView = UIView(frame: CGRect.init(x: 0, y: -4, width: 245, height: 184))
-
+    private let flashView = UIView(frame: CGRect.init(x: 0, y: -6, width: 245, height: 188))
     private let systemSoundID: SystemSoundID = 1108
 
     
@@ -49,7 +43,7 @@ class RobotViewController: UIViewController {
         if ((self.imageView.image) != nil) {
             
             //animate flash confirmation
-            UIView.animate(withDuration: 0.08, delay: 0, options: [], animations: {
+            UIView.animate(withDuration: 0.08, delay: 0, options: [], animations: {  
                 self.flashView.alpha = 1
             }, completion: {
                 (finished: Bool) -> Void in
