@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //give top level controller an instance of PhotoManager in AppDelegate in orer to call fetchRecentPhoto() when app initially loads.
-        let robotViewController = window!.rootViewController as! RobotViewController
-        robotViewController.store = PhotoManager()
-        
+//        let robotViewController = window!.rootViewController as! RobotViewController
+//        robotViewController.store = PhotoManager()
+//        
         return true
     }
 
