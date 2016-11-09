@@ -21,13 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38T-vL-KNr">
-                                <rect key="frame" x="57" y="215" width="206" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKi-xB-ENV">
                                 <rect key="frame" x="101" y="368" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,7 +44,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Rr0-jN-pfn"/>
                     <connections>
-                        <outlet property="usernameLabel" destination="38T-vL-KNr" id="acJ-2t-cUG"/>
                         <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="XZU-ml-kNY"/>
                     </connections>
                 </viewController>
@@ -322,6 +314,6 @@
         <image name="default_image" width="754" height="595"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="98y-8u-Q6k"/>
+        <segue reference="XZU-ml-kNY"/>
     </inferredMetricsTieBreakers>
 </document>

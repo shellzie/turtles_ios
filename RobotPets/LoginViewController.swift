@@ -35,9 +35,9 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true){}
         } else {
             API.sendPostCommand(parameters:["email":email, "password":password], urlOption: "app")
-            //if ( data != nil ) {
-             //   let res = response as NSHTTPURLResponse!;
-            //}
+            if ( data != nil ) {
+                let res = response as NSHTTPURLResponse!;
+            }
         }
     }
 

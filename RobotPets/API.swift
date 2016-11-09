@@ -16,7 +16,7 @@ let session: URLSession = {
 
 struct API {
     
-    private static let herokuURLString = "http://localhost:3000/users"
+    private static let herokuURLString = "http://localhost:3000/ios_validate"
     //"https://secret-brushlands-1127.herokuapp.com/users"
     private static let baseURLString = "http://benbot.local/robot.py"
     
