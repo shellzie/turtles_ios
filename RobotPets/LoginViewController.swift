@@ -26,15 +26,11 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginTapped(_ sender: UIButton) {
-        let email: String = self.email.text!
-        let password: String = self.password.text!
-        if email.isEmpty {
-            print("nothing here")
-        }
+        let email:String = self.email.text!
+        let password:String = self.password.text!
         
         if ( email.isEmpty || password.isEmpty) {
-            
-            let alert = UIAlertController(title: "Sign in Failed!", message:"Please enter email and password", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Sign In Failed!", message:"Please enter email and password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
             self.present(alert, animated: true){}
         } else {

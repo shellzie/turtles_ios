@@ -16,7 +16,8 @@ let session: URLSession = {
 
 struct API {
     
-    private static let herokuURLString = "https://secret-brushlands-1127.herokuapp.com"
+    private static let herokuURLString = "http://localhost:3000/users"
+    //"https://secret-brushlands-1127.herokuapp.com/users"
     private static let baseURLString = "http://benbot.local/robot.py"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
@@ -27,11 +28,11 @@ struct API {
             components = NSURLComponents(string: baseURLString)!
         }
         else if (urlOption == "app") {
-            components = NSURLComponents(string: herokuURLString + "/login")!
+            components = NSURLComponents(string: herokuURLString)!
         }
         
+        /*
         var queryItems = [NSURLQueryItem]()
-        
         if let queryParams = parameters {
             for (key, value) in queryParams {
                 let item = NSURLQueryItem(name: key, value: value)
@@ -39,9 +40,24 @@ struct API {
             }
         }
         components.queryItems = queryItems as [URLQueryItem]?
+        */
+        
+        
+        var paramString = ""
+        for (key, value) in parameters! {
+            let pair = key + "=" + value + "&"
+            paramString += pair
+        }
+        
+        //components.queryItems = queryItems as [URLQueryItem]?
+        
+        //var bodyData = "key1=value&key2=value&key3=value"
+        
+        
         let url = components.url! as NSURL
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
+        request.httpBody = paramString.data(using: String.Encoding.utf8);
         
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             print("++++++++++++++++++ Response is \(response) ")

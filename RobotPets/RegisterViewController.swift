@@ -26,6 +26,22 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {
+        
+        let email:String = self.email.text!
+        let password:String = self.password.text!
+        let password_confirmation:String = passwordConfirmation.text!
+        
+        if (email.isEmpty || password.isEmpty || password_confirmation.isEmpty) {
+            let alert = UIAlertController(title: "Sign Up Failed!", message:"Please enter email, password, and password confirmation", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        } else if (!password.isEqual(password_confirmation) ) {
+            let alert = UIAlertController(title: "Sign in Failed!", message:"Passwords Don't Match", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        } else {
+            API.sendPostCommand(parameters: ["email":email, "password":password, "password_confirmation":password_confirmation], urlOption: "app")
+        }
     }
 
     @IBAction func goToLogin(_ sender: UIButton) {
