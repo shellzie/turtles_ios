@@ -34,12 +34,28 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
             self.present(alert, animated: true){}
         } else {
-            API.sendPostCommand(parameters:["email":email, "password":password], urlOption: "app")
-            if ( data != nil ) {
-                let res = response as NSHTTPURLResponse!;
+            let response:HTTPURLResponse = API.sendPostCommand(parameters:["email":email, "password":password], urlOption: "app")
+            
+            if (response != nil) {
+                let responseCode = response.statusCode
+                if (responseCode >= 200 && responseCode < 300) {
+                    let prefs:UserDefaults = UserDefaults.standard
+                    prefs.set(email, forKey: "EMAIL")
+                    prefs.set(1, forKey: "ISLOGGEDIN")
+                    prefs.synchronize()
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    
+                    let alert = UIAlertController(title: "Log In Failed!", message:"Credentials not found", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+                    self.present(alert, animated: true){}
+                }
+            } else {
+                
+                let alert = UIAlertController(title: "Log In Failed!", message:"Connection Failure", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+                self.present(alert, animated: true){}
             }
         }
     }
-
-
 }

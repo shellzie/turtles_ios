@@ -22,7 +22,17 @@ class HomeViewController: UIViewController {
     
     
     override func viewDidAppear(_ _animated: Bool) {
-        self.performSegue(withIdentifier: "goto_login", sender: self)
+        
+        super.viewDidAppear(true)
+        
+        let prefs:UserDefaults = UserDefaults.standard
+        
+        let isLoggedIn:Int = prefs.value(forKey: "ISLOGGEDIN") as! Int
+        if (isLoggedIn != 1) {
+            self.performSegue(withIdentifier: "goto_login", sender: self)
+        } else {
+            self.usernameLabel.text = prefs.value(forKey: "EMAIL") as! String?
+        }
     }
     
     

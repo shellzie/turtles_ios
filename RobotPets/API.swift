@@ -21,7 +21,7 @@ struct API {
     private static let baseURLString = "http://benbot.local/robot.py"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
-    static func sendPostCommand(parameters: [String:String]?, urlOption: String) {
+    static func sendPostCommand(parameters: [String:String]?, urlOption: String) -> HTTPURLResponse {
  
         var components = NSURLComponents.init()
         if (urlOption == "turtle") {
@@ -59,13 +59,16 @@ struct API {
         request.httpMethod = "POST"
         request.httpBody = paramString.data(using: String.Encoding.utf8);
         
+        //let task: NSURLSessionDataTask = session.dataTask(request, completionHandler: {(data, response, error) in return completion(data, response, error)})
+        
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
             print("++++++++++++++++++ Response is \(response) ")
             print("++++++++++++++++++ Error is \(error) ")
             print("++++++++++++++++++ Data is \(data) ")
-
         }
         task.resume()
+        return task.response as! HTTPURLResponse
+        
     }
     
     static func cameraURL() -> NSURL? {
