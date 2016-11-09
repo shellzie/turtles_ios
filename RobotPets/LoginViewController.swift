@@ -26,15 +26,24 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginTapped(_ sender: UIButton) {
+        let email: String = self.email.text!
+        let password: String = self.password.text!
+        if email.isEmpty {
+            print("nothing here")
+        }
+        
+        if ( email.isEmpty || password.isEmpty) {
+            
+            let alert = UIAlertController(title: "Sign in Failed!", message:"Please enter email and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            self.present(alert, animated: true){}
+        } else {
+            API.sendPostCommand(parameters:["email":email, "password":password], urlOption: "app")
+            //if ( data != nil ) {
+             //   let res = response as NSHTTPURLResponse!;
+            //}
+        }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

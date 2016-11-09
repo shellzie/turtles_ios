@@ -16,14 +16,20 @@ let session: URLSession = {
 
 struct API {
     
-//    private static let baseURLString = "https://secret-brushlands-1127.herokuapp.com"
+    private static let herokuURLString = "https://secret-brushlands-1127.herokuapp.com"
     private static let baseURLString = "http://benbot.local/robot.py"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
-    
-    static func sendPostCommand(parameters: [String:String]?) {
+    static func sendPostCommand(parameters: [String:String]?, urlOption: String) {
  
-        let components = NSURLComponents(string: baseURLString)!
+        var components = NSURLComponents.init()
+        if (urlOption == "turtle") {
+            components = NSURLComponents(string: baseURLString)!
+        }
+        else if (urlOption == "app") {
+            components = NSURLComponents(string: herokuURLString + "/login")!
+        }
+        
         var queryItems = [NSURLQueryItem]()
         
         if let queryParams = parameters {
@@ -38,15 +44,16 @@ struct API {
         request.httpMethod = "POST"
         
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
-//            print("++++++++++++++++++ Response is \(response) ")
-//            print("++++++++++++++++++ Error is \(error) ")
+            print("++++++++++++++++++ Response is \(response) ")
+            print("++++++++++++++++++ Error is \(error) ")
+            print("++++++++++++++++++ Data is \(data) ")
+
         }
         task.resume()
     }
     
     static func cameraURL() -> NSURL? {
         let urlString = "http://benbot.local/motion/robotView.jpg"
-//        let urlString = "http://shellzie.com/app/images/kids.jpeg"
         let url = NSURL(string: urlString)
         return url
     }

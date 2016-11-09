@@ -21,19 +21,19 @@ class RobotViewController: UIViewController {
 
     
     @IBAction func moveForward(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:forward"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:forward"], urlOption: "turtle")
     }
     
     @IBAction func moveReverse(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:reverse"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:reverse"], urlOption: "turtle")
     }
     
     @IBAction func turnLeft(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:left"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:left"], urlOption: "turtle")
     }
     
     @IBAction func turnRight(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:right"])
+        API.sendPostCommand(parameters:["r_cmd":"Basics:right"], urlOption: "turtle")
     }
 
     @IBAction func saveImage(sender: UIButton) {

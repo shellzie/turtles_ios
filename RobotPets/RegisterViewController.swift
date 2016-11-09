@@ -10,6 +10,10 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet var email: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var passwordConfirmation: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +25,13 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func registerTapped(_ sender: UIButton) {
+    }
 
+    @IBAction func goToLogin(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
