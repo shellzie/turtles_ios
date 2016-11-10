@@ -21,19 +21,19 @@ class RobotViewController: UIViewController {
 
     
     @IBAction func moveForward(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:forward"], urlOption: "turtle")
+        API.sendNavCommand(parameters:["r_cmd":"Basics:forward"])
     }
     
     @IBAction func moveReverse(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:reverse"], urlOption: "turtle")
+        API.sendNavCommand(parameters:["r_cmd":"Basics:reverse"])
     }
     
     @IBAction func turnLeft(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:left"], urlOption: "turtle")
+        API.sendNavCommand(parameters:["r_cmd":"Basics:left"])
     }
     
     @IBAction func turnRight(sender: UIButton) {
-        API.sendPostCommand(parameters:["r_cmd":"Basics:right"], urlOption: "turtle")
+        API.sendNavCommand(parameters:["r_cmd":"Basics:right"])
     }
 
     @IBAction func saveImage(sender: UIButton) {
@@ -111,9 +111,6 @@ class RobotViewController: UIViewController {
     func getNextFrame() {
         print("+++++++++++ getNextFrame() was called ++++++++++++")
         self.store.fetchRecentPhoto()
-        
-//        OperationQueue.main.addOperation {
-//            self.imageView.image = self.store.lastPhoto
-//        }
+
     }
 }

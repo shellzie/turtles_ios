@@ -22,17 +22,21 @@ class HomeViewController: UIViewController {
     
     
     override func viewDidAppear(_ _animated: Bool) {
-        
         super.viewDidAppear(true)
         
-        let prefs:UserDefaults = UserDefaults.standard
-        
-        let isLoggedIn:Int = prefs.value(forKey: "ISLOGGEDIN") as! Int
-        if (isLoggedIn != 1) {
-            self.performSegue(withIdentifier: "goto_login", sender: self)
-        } else {
-            self.usernameLabel.text = prefs.value(forKey: "EMAIL") as! String?
+        let prefs:UserDefaults = UserDefaults.init()
+        if (prefs.value(forKey: "ISLOGGEDIN") == nil) {
+            print("no value set in preferences")
         }
+        else {
+            let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN")
+            if (isLoggedIn != 1) {
+                self.performSegue(withIdentifier: "goto_login", sender: self)
+            } else {
+                self.usernameLabel.text = prefs.string(forKey: "EMAIL") 
+            }
+        }
+        
     }
     
     

@@ -16,22 +16,12 @@ let session: URLSession = {
 
 struct API {
     
-    private static let herokuURLString = "http://localhost:3000/ios_validate"
-    //"https://secret-brushlands-1127.herokuapp.com/users"
+    static let herokuURLString = "http://localhost:3000/ios_validate"  //"https://secret-brushlands-1127.herokuapp.com/users"
     private static let baseURLString = "http://benbot.local/robot.py"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
-    static func sendPostCommand(parameters: [String:String]?, urlOption: String) -> HTTPURLResponse {
- 
-        var components = NSURLComponents.init()
-        if (urlOption == "turtle") {
-            components = NSURLComponents(string: baseURLString)!
-        }
-        else if (urlOption == "app") {
-            components = NSURLComponents(string: herokuURLString)!
-        }
-        
-        /*
+    static func sendNavCommand(parameters: [String:String]?) {
+        let components = NSURLComponents(string: baseURLString)!
         var queryItems = [NSURLQueryItem]()
         if let queryParams = parameters {
             for (key, value) in queryParams {
@@ -40,43 +30,47 @@ struct API {
             }
         }
         components.queryItems = queryItems as [URLQueryItem]?
-        */
-        
-        
-        var paramString = ""
-        for (key, value) in parameters! {
-            let pair = key + "=" + value + "&"
-            paramString += pair
-        }
-        
-        //components.queryItems = queryItems as [URLQueryItem]?
-        
-        //var bodyData = "key1=value&key2=value&key3=value"
-        
-        
         let url = components.url! as NSURL
         let request = NSMutableURLRequest(url: url as URL)
         request.httpMethod = "POST"
-        request.httpBody = paramString.data(using: String.Encoding.utf8);
-        
-        //let task: NSURLSessionDataTask = session.dataTask(request, completionHandler: {(data, response, error) in return completion(data, response, error)})
-        
-        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> () in
             print("++++++++++++++++++ Response is \(response) ")
             print("++++++++++++++++++ Error is \(error) ")
             print("++++++++++++++++++ Data is \(data) ")
         }
         task.resume()
-        return task.response as! HTTPURLResponse
-        
     }
     
+    //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
+//    static func queryDatabase(parameters: [String:String]?) {
+//        let components = NSURLComponents(string: herokuURLString)
+//        var paramString = ""
+//        for (key, value) in parameters! {
+//            let pair = key + "=" + value + "&"
+//            paramString += pair
+//        }
+//        let url = components?.url
+//        let request = NSMutableURLRequest(url: url! as URL)
+//        request.httpMethod = "POST"
+//        request.httpBody = paramString.data(using: String.Encoding.utf8);
+//        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> () in
+//            print("++++++++++++++++++ Response is \(response) ")
+//            print("++++++++++++++++++ Error is \(error) ")
+//            print("++++++++++++++++++ Data is \(data) ")
+//            
+//            if (response.statusCode >= 200 && response.statusCode < 300) {
+//                
+//            }
+//            else if
+//        
+//        }
+//        task.resume()
+//    }
+    
+
     static func cameraURL() -> NSURL? {
         let urlString = "http://benbot.local/motion/robotView.jpg"
         let url = NSURL(string: urlString)
         return url
     }
-
-
-
 }

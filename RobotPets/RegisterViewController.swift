@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
             self.present(alert, animated: true){}
         } else {
-            API.sendPostCommand(parameters: ["email":email, "password":password, "password_confirmation":password_confirmation], urlOption: "app")
+            //API.queryDatabase(parameters: ["email":email, "password":password, "password_confirmation":password_confirmation])
         }
     }
 
