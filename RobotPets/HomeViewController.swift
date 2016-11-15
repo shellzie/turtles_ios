@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var usernameLabel: UILabel!
     
-    
     override func viewDidLoad() {
          super.viewDidLoad()
     }

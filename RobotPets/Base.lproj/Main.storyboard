@@ -101,7 +101,6 @@
                                 </state>
                                 <connections>
                                     <action selector="registerTapped:" destination="UJJ-Wh-7V8" eventType="touchUpInside" id="e1p-pW-Dhs"/>
-                                    <segue destination="Uqe-CD-sMV" kind="presentation" identifier="registration_to_home" id="3eS-vR-SMV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-R2-kAt">
@@ -127,11 +126,12 @@
                         <outlet property="email" destination="Enl-1z-w1t" id="1e7-Nb-298"/>
                         <outlet property="password" destination="mae-az-6TT" id="aRY-BR-PsB"/>
                         <outlet property="passwordConfirmation" destination="beZ-Ut-cab" id="ZJS-tg-Ky8"/>
+                        <segue destination="Uqe-CD-sMV" kind="presentation" identifier="registration_to_home" id="icl-Te-5io"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYs-H7-cbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1729" y="639"/>
+            <point key="canvasLocation" x="-1695" y="567"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1f2-9L-mgt">
@@ -323,7 +323,7 @@
         <image name="default_image" width="754" height="595"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3eS-vR-SMV"/>
-        <segue reference="XZU-ml-kNY"/>
+        <segue reference="98y-8u-Q6k"/>
+        <segue reference="icl-Te-5io"/>
     </inferredMetricsTieBreakers>
 </document>
