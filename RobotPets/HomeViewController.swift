@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var usernameLabel: UILabel!
     
+    
     override func viewDidLoad() {
          super.viewDidLoad()
     }
@@ -19,7 +20,6 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     override func viewDidAppear(_ _animated: Bool) {
         super.viewDidAppear(true)
@@ -36,11 +36,11 @@ class HomeViewController: UIViewController {
                 self.usernameLabel.text = prefs.string(forKey: "EMAIL") 
             }
         }
-        
     }
-    
     
     @IBAction func logoutTapped(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goto_login", sender: self)
+        let appDomain = Bundle.main.bundleIdentifier
+        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
     }
 }

@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -46,7 +45,9 @@ class LoginViewController: UIViewController {
     @IBAction func loginTapped(_ sender: UIButton) {
         let email:String = self.email.text!
         let password:String = self.password.text!
-        let trimmedEmail = email.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        let trimmedEmail = email.trimmingCharacters(in: CharacterSet.whitespaces)
+        
         if (trimmedEmail.isEmpty || password.isEmpty) {
             self.createAlertWindow(titleStr:"Sign In Failed!", msgStr:"Please enter email and password")
         } else if (!self.isValidEmail(str: email)) {
@@ -54,7 +55,7 @@ class LoginViewController: UIViewController {
         } else if !self.isValidPassword(str: password) {
             self.createAlertWindow(titleStr:"Error with password!", msgStr:"Please enter a password containing at least 6 characters")
         } else {
-            let components = NSURLComponents(string: API.herokuURLString)
+            let components = NSURLComponents(string: API.herokuURLString + "/ios_login")
             let paramString = "email=\(email)&password=\(password)"
             let url = components?.url
             let request = NSMutableURLRequest(url: url! as URL)
@@ -74,22 +75,12 @@ class LoginViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
                 else {
-                    
                     DispatchQueue.main.async(execute: {
                         self.createAlertWindow(titleStr:"Sign in Failed", msgStr:"Credentials not found")
                     })
-                    
                 }
             }
             task.resume()
-            
-
-            
-            
-            
-                    
-            
-            
         }
     }
 }
