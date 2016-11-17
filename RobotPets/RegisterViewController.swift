@@ -90,9 +90,14 @@ class RegisterViewController: UIViewController {
                     })
                     
                 }
-                else {
+                else if(resp.statusCode >= 300 && resp.statusCode < 400) {
                     DispatchQueue.main.async(execute: {
-                        self.createAlertWindow(titleStr:"Sign in Failed", msgStr:"Could not create user. Unknown error??")
+                        self.createAlertWindow(titleStr:"Sign in Failed", msgStr:"Could not create user. Error 300-400")
+                    })
+                }
+                else if (resp.statusCode >= 400) {
+                    DispatchQueue.main.async(execute: {
+                        self.createAlertWindow(titleStr:"Sign in Failed", msgStr:"Could not create user. Error 400+")
                     })
                 }
             }
@@ -100,12 +105,7 @@ class RegisterViewController: UIViewController {
         }
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "registration_to_home" {
-//            var vc = segue.destinationViewController as! HomeViewController
-//            //vc.data = "Data you want to pass"
-//            //Data has to be a variable name in your RandomViewController
-//        }
+    
 
 
     @IBAction func goToLogin(_ sender: UIButton) {
