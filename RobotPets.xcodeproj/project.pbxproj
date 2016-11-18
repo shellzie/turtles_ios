@@ -18,6 +18,7 @@
 		4B5C6DCD1DD27C6100C70610 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C6DCC1DD27C6100C70610 /* LoginViewController.swift */; };
 		4B5C6DCF1DD27E3A00C70610 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */; };
 		4BA2C4051DDBC1050079E0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA2C4031DDBC1050079E0FF /* Main.storyboard */; };
+		4BEE27681DDED9D9009328A1 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE27671DDED9D9009328A1 /* PromoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4B5C6DCC1DD27C6100C70610 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4BA2C4041DDBC1050079E0FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BEE27671DDED9D9009328A1 /* PromoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4B44AE691DA9E6DA00CE8448 /* RobotViewController.swift */,
 				4B44AE601DA9E1CE00CE8448 /* LaunchScreen.storyboard */,
 				4B5C6DCA1DD278CE00C70610 /* HomeViewController.swift */,
+				4BEE27671DDED9D9009328A1 /* PromoViewController.swift */,
 			);
 			path = RobotPets;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				4B44AE581DA9E1CE00CE8448 /* AppDelegate.swift in Sources */,
 				4B1D2C001DB29BF70032822D /* API.swift in Sources */,
 				4B44AE6A1DA9E6DA00CE8448 /* RobotViewController.swift in Sources */,
+				4BEE27681DDED9D9009328A1 /* PromoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
