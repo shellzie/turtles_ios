@@ -24,16 +24,16 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(true)
         
         let prefs:UserDefaults = UserDefaults.init()
-        if (prefs.value(forKey: "ISLOGGEDIN") == nil) {
-            print("no value set in preferences")
+        let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN")
+        let hasPromo:Int = prefs.integer(forKey: "HASPROMO")
+        
+        if (hasPromo != 1) {
+            self.performSegue(withIdentifier: "goto_promo", sender: self)
         }
-        else {
-            let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN")
-            if (isLoggedIn != 1) {
-                self.performSegue(withIdentifier: "goto_login", sender: self)
-            } else {
-                self.usernameLabel.text = prefs.string(forKey: "EMAIL") 
-            }
+        else if (isLoggedIn != 1) {
+            self.performSegue(withIdentifier: "goto_login", sender: self)
+        } else {
+            self.usernameLabel.text = prefs.string(forKey: "EMAIL") 
         }
     }
     
