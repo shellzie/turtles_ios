@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="-2435.625" y="-157.3943661971831"/>
         </scene>
-        <!--View Controller-->
+        <!--Promo View Controller-->
         <scene sceneID="SgR-69-izY">
             <objects>
-                <viewController id="CNm-p2-BuE" sceneMemberID="viewController">
+                <viewController id="CNm-p2-BuE" customClass="PromoViewController" customModule="RobotPets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w7m-nG-wEp"/>
                         <viewControllerLayoutGuide type="bottom" id="eFF-qG-dse"/>
@@ -88,10 +88,16 @@
                                 <color key="backgroundColor" red="0.1414765029" green="0.17031128279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Get Started!"/>
+                                <connections>
+                                    <action selector="getStartedTappedWithSender:" destination="CNm-p2-BuE" eventType="touchUpInside" id="K1g-1R-OJm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="promo" destination="4BF-Jz-Tkk" id="jJs-sn-8jt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,7 +368,7 @@
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="98y-8u-Q6k"/>
         <segue reference="icl-Te-5io"/>
+        <segue reference="XZU-ml-kNY"/>
     </inferredMetricsTieBreakers>
 </document>
