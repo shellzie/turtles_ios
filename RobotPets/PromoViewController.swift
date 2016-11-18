@@ -69,12 +69,12 @@ class PromoViewController: UIViewController {
                 }
                 else if(resp.statusCode >= 300 && resp.statusCode < 400) {
                     DispatchQueue.main.async(execute: {
-                        self.createAlertWindow(titleStr:"Promo Failed", msgStr:"Could not create user. Error 300-400")
+                        self.createAlertWindow(titleStr:"Promo Failed", msgStr:"Invalid Code. Error 300-400")
                     })
                 }
                 else if (resp.statusCode >= 400) {
                     DispatchQueue.main.async(execute: {
-                        self.createAlertWindow(titleStr:"Promo Failed", msgStr:"Could not create user. Error 400+")
+                        self.createAlertWindow(titleStr:"Promo Failed", msgStr:"Invalid Code. Error 400+")
                     })
                 }
             }
