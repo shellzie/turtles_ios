@@ -59,6 +59,44 @@
             </objects>
             <point key="canvasLocation" x="-2435.625" y="-157.3943661971831"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SgR-69-izY">
+            <objects>
+                <viewController id="CNm-p2-BuE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w7m-nG-wEp"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFF-qG-dse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9G-LX-zY9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turtle_promo_page" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-rY-4Go">
+                                <rect key="frame" x="40" y="42" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Turtle's Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-Jz-Tkk">
+                                <rect key="frame" x="16" y="258" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5y-L7-MlK">
+                                <rect key="frame" x="16" y="349" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1414765029" green="0.17031128279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Get Started!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2681.25" y="549.29577464788736"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="Kfc-FW-ye4">
             <objects>
@@ -321,6 +359,7 @@
     <resources>
         <image name="camera_circle" width="900" height="900"/>
         <image name="default_image" width="754" height="595"/>
+        <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="98y-8u-Q6k"/>
