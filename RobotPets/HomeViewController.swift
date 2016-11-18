@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
             self.performSegue(withIdentifier: "goto_promo", sender: self)
         }
         else if (isLoggedIn != 1) {
-            self.performSegue(withIdentifier: "goto_login", sender: self)
+            self.performSegue(withIdentifier: "goto_register", sender: self)
         } else {
             self.usernameLabel.text = prefs.string(forKey: "EMAIL") 
         }

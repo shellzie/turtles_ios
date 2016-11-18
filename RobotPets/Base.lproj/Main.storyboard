@@ -53,6 +53,8 @@
                     <connections>
                         <outlet property="usernameLabel" destination="HLE-fN-kDe" id="s3L-1U-sfB"/>
                         <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="XZU-ml-kNY"/>
+                        <segue destination="CNm-p2-BuE" kind="presentation" identifier="goto_promo" id="9ZR-GQ-SXh"/>
+                        <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="goto_register" id="8OW-tV-Hmg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUM-le-vef" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -101,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2681.25" y="549.29577464788736"/>
+            <point key="canvasLocation" x="-2775" y="627"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Kfc-FW-ye4">
@@ -369,6 +371,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="icl-Te-5io"/>
+        <segue reference="8OW-tV-Hmg"/>
         <segue reference="XZU-ml-kNY"/>
     </inferredMetricsTieBreakers>
 </document>
