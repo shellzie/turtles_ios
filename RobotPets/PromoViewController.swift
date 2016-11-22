@@ -44,7 +44,7 @@ class PromoViewController: UIViewController {
         } else if (!self.isValidPromo(str: trimmedPromo)) {
             self.createAlertWindow(titleStr:"Uh oh!", msgStr:"Please enter a valid promo code")
         } else {
-            let components = NSURLComponents(string: API.herokuURLString + "/promo")
+            let components = NSURLComponents(string: API.herokuURLString + "/ios_promo")
             let paramString = "code=\(promo)"
             let url = components?.url
             let request = NSMutableURLRequest(url: url! as URL)

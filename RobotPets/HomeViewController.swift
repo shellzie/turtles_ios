@@ -38,7 +38,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goto_login", sender: self)
+        DispatchQueue.main.async(execute: {
+            self.performSegue(withIdentifier: "goto_login", sender: self)
+        })
         let appDomain = Bundle.main.bundleIdentifier
         UserDefaults.standard.removePersistentDomain(forName: appDomain!)
     }

@@ -12,9 +12,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
-
+    @IBOutlet var promo: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let prefs:UserDefaults = UserDefaults.standard
+        self.promo.text = prefs.string(forKey: "PROMO")
+
         // Do any additional setup after loading the view.
     }
 
@@ -72,7 +76,11 @@ class LoginViewController: UIViewController {
                     prefs.set(email, forKey: "EMAIL")
                     prefs.set(1, forKey: "ISLOGGEDIN")
                     prefs.synchronize()
-                    self.dismiss(animated: true, completion: nil)
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.performSegue(withIdentifier: "login_to_home", sender: self)
+                    })
+                    
                 }
                 else {
                     DispatchQueue.main.async(execute: {

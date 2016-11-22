@@ -98,9 +98,6 @@
                                 <rect key="frame" x="16" y="383" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Already have an account? Login"/>
-                                <connections>
-                                    <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="promo_to_login" id="ECZ-tV-wJm"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,8 +160,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Already have an account? Login"/>
                                 <connections>
-                                    <action selector="goToLogin:" destination="UJJ-Wh-7V8" eventType="touchUpInside" id="ZHa-O1-6fi"/>
-                                    <segue destination="Tsi-Ln-Hp1" kind="presentation" id="98y-8u-Q6k"/>
+                                    <segue destination="Tsi-Ln-Hp1" kind="presentation" id="UxL-A8-Lku"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-Vu-Gw6">
@@ -181,7 +177,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-f5-aZu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-f5-aZu">
                                 <rect key="frame" x="97" y="399" width="207" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -195,6 +191,7 @@
                         <outlet property="email" destination="Enl-1z-w1t" id="1e7-Nb-298"/>
                         <outlet property="password" destination="mae-az-6TT" id="aRY-BR-PsB"/>
                         <outlet property="passwordConfirmation" destination="beZ-Ut-cab" id="ZJS-tg-Ky8"/>
+                        <outlet property="promo" destination="7k0-f5-aZu" id="WFl-ee-zdq"/>
                         <segue destination="Uqe-CD-sMV" kind="presentation" identifier="registration_to_home" id="icl-Te-5io"/>
                     </connections>
                 </viewController>
@@ -245,7 +242,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account? Sign up"/>
                                 <connections>
-                                    <segue destination="UJJ-Wh-7V8" kind="presentation" id="pIQ-Pw-IfP"/>
+                                    <segue destination="UJJ-Wh-7V8" kind="presentation" id="5Ke-6W-eUH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome  Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEs-4b-jit">
@@ -262,7 +259,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91c-M7-TuU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91c-M7-TuU">
                                 <rect key="frame" x="97" y="399" width="207" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -275,6 +272,8 @@
                     <connections>
                         <outlet property="email" destination="1pB-Di-g5M" id="F0c-mH-OnX"/>
                         <outlet property="password" destination="nKd-mV-ea6" id="dzo-cE-dcF"/>
+                        <outlet property="promo" destination="91c-M7-TuU" id="rS6-a6-gdn"/>
+                        <segue destination="Uqe-CD-sMV" kind="presentation" identifier="login_to_home" id="gFH-zn-enz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsk-LS-eZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -407,8 +406,8 @@
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="icl-Te-5io"/>
-        <segue reference="pIQ-Pw-IfP"/>
-        <segue reference="98y-8u-Q6k"/>
+        <segue reference="gFH-zn-enz"/>
+        <segue reference="UxL-A8-Lku"/>
+        <segue reference="5Ke-6W-eUH"/>
     </inferredMetricsTieBreakers>
 </document>
