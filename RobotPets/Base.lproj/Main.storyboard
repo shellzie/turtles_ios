@@ -52,15 +52,22 @@
                     <navigationItem key="navigationItem" title="Home" id="Rr0-jN-pfn"/>
                     <connections>
                         <outlet property="usernameLabel" destination="HLE-fN-kDe" id="s3L-1U-sfB"/>
+<<<<<<< HEAD
                         <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="goto_register" id="r8U-2U-yri"/>
                         <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="I7z-RF-GIa"/>
                         <segue destination="C1z-Cv-wYj" kind="presentation" identifier="goto_promo" id="UzB-lZ-kfc"/>
+=======
+                        <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="XZU-ml-kNY"/>
+                        <segue destination="CNm-p2-BuE" kind="presentation" identifier="goto_promo" id="9ZR-GQ-SXh"/>
+                        <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="goto_register" id="8OW-tV-Hmg"/>
+>>>>>>> dev
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUM-le-vef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2435.625" y="-157.3943661971831"/>
         </scene>
+<<<<<<< HEAD
         <!--View Controller-->
         <scene sceneID="jY8-d1-j3p">
             <objects>
@@ -75,11 +82,32 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promo Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-Ze-pvy">
                                 <rect key="frame" x="16" y="177" width="288" height="30"/>
+=======
+        <!--Promo View Controller-->
+        <scene sceneID="SgR-69-izY">
+            <objects>
+                <viewController id="CNm-p2-BuE" customClass="PromoViewController" customModule="RobotPets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w7m-nG-wEp"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFF-qG-dse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9G-LX-zY9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turtle_promo_page" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-rY-4Go">
+                                <rect key="frame" x="40" y="42" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Turtle's Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-Jz-Tkk">
+                                <rect key="frame" x="16" y="197" width="288" height="30"/>
+>>>>>>> dev
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-qv-dfr">
                                 <rect key="frame" x="16" y="302" width="288" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,6 +132,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z72-tm-hdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3050.625" y="640.14084507042253"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5y-L7-MlK">
+                                <rect key="frame" x="16" y="248" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1414765029" green="0.17031128279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Get Started!"/>
+                                <connections>
+                                    <action selector="getStartedTappedWithSender:" destination="CNm-p2-BuE" eventType="touchUpInside" id="K1g-1R-OJm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTh-Jc-MV7">
+                                <rect key="frame" x="16" y="383" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Already have an account? Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="promo" destination="4BF-Jz-Tkk" id="jJs-sn-8jt"/>
+                        <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="promo_to_register" id="V7B-Dh-3aT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2775" y="626.4084507042254"/>
+>>>>>>> dev
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Kfc-FW-ye4">
@@ -132,14 +188,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Confirmation" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="beZ-Ut-cab">
-                                <rect key="frame" x="16" y="214" width="288" height="30"/>
+                                <rect key="frame" x="16" y="210" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-fY-bS7">
-                                <rect key="frame" x="16" y="276" width="288" height="44"/>
+                                <rect key="frame" x="16" y="290" width="288" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14147650286018942" green="0.17031128275389107" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
@@ -150,12 +206,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-R2-kAt">
-                                <rect key="frame" x="16" y="372" width="288" height="30"/>
+                                <rect key="frame" x="16" y="501" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Already have an account? Login"/>
                                 <connections>
-                                    <action selector="goToLogin:" destination="UJJ-Wh-7V8" eventType="touchUpInside" id="ZHa-O1-6fi"/>
-                                    <segue destination="Tsi-Ln-Hp1" kind="presentation" id="98y-8u-Q6k"/>
+                                    <segue destination="Tsi-Ln-Hp1" kind="presentation" id="UxL-A8-Lku"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-Vu-Gw6">
@@ -165,6 +220,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Promo Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsU-Tm-DYH">
+                                <rect key="frame" x="16" y="404" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-f5-aZu">
+                                <rect key="frame" x="97" y="399" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -172,12 +241,13 @@
                         <outlet property="email" destination="Enl-1z-w1t" id="1e7-Nb-298"/>
                         <outlet property="password" destination="mae-az-6TT" id="aRY-BR-PsB"/>
                         <outlet property="passwordConfirmation" destination="beZ-Ut-cab" id="ZJS-tg-Ky8"/>
+                        <outlet property="promo" destination="7k0-f5-aZu" id="WFl-ee-zdq"/>
                         <segue destination="Uqe-CD-sMV" kind="presentation" identifier="registration_to_home" id="icl-Te-5io"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYs-H7-cbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1695" y="567"/>
+            <point key="canvasLocation" x="-1695" y="566.19718309859161"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1f2-9L-mgt">
@@ -222,7 +292,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account? Sign up"/>
                                 <connections>
-                                    <segue destination="UJJ-Wh-7V8" kind="presentation" id="pIQ-Pw-IfP"/>
+                                    <segue destination="UJJ-Wh-7V8" kind="presentation" id="5Ke-6W-eUH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome  Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEs-4b-jit">
@@ -232,17 +302,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Promo Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUn-M5-LtI">
+                                <rect key="frame" x="16" y="404" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91c-M7-TuU">
+                                <rect key="frame" x="97" y="399" width="207" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="1pB-Di-g5M" id="F0c-mH-OnX"/>
                         <outlet property="password" destination="nKd-mV-ea6" id="dzo-cE-dcF"/>
+                        <outlet property="promo" destination="91c-M7-TuU" id="rS6-a6-gdn"/>
+                        <segue destination="Uqe-CD-sMV" kind="presentation" identifier="login_to_home" id="gFH-zn-enz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsk-LS-eZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1056" y="-335"/>
+            <point key="canvasLocation" x="-1057.5" y="-335.91549295774649"/>
         </scene>
         <!--Robot View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -367,10 +453,17 @@
     <resources>
         <image name="camera_circle" width="900" height="900"/>
         <image name="default_image" width="754" height="595"/>
+        <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="98y-8u-Q6k"/>
         <segue reference="r8U-2U-yri"/>
         <segue reference="icl-Te-5io"/>
+=======
+        <segue reference="gFH-zn-enz"/>
+        <segue reference="UxL-A8-Lku"/>
+        <segue reference="5Ke-6W-eUH"/>
+>>>>>>> dev
     </inferredMetricsTieBreakers>
 </document>

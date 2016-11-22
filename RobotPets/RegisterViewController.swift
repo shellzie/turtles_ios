@@ -13,9 +13,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var passwordConfirmation: UITextField!
+    @IBOutlet var promo:UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let prefs:UserDefaults = UserDefaults.standard
+        self.promo.text = prefs.string(forKey: "PROMO")
 
         // Do any additional setup after loading the view.
     }
@@ -104,12 +107,10 @@ class RegisterViewController: UIViewController {
             task.resume()
         }
     }
-    
-    
 
-
-    @IBAction func goToLogin(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func goToLogin(_ sender: UIButton) {
+////        self.dismiss(animated: true, completion: nil)
+//        self.performSegue(withIdentifier: "register_to_login", sender: self)
+//    }
 
 }
