@@ -16,7 +16,12 @@ let session: URLSession = {
 
 struct API {
     
-    static let herokuURLString = "http://localhost:3000" //"https://robot-pets-api.herokuapp.com"
+    #if DEBUG
+        static let herokuURLString = "http://localhost:3000"
+    #else
+        static let herokuURLString = "https://robot-pets-api.herokuapp.com"
+    #endif
+    
     private static let baseURLString = "http://benbot.local/robot.py"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
