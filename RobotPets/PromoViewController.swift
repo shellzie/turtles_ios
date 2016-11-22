@@ -76,6 +76,11 @@ class PromoViewController: UIViewController {
                         self.createAlertWindow(titleStr:"Promo Failed", msgStr:"Invalid Code. Error 400+")
                     })
                 }
+                else {
+                    DispatchQueue.main.async(execute: {
+                        self.createAlertWindow(titleStr:"Failure", msgStr:"Server is not up")
+                    })
+                }
             }
             task.resume()
         }
