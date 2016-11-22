@@ -52,37 +52,15 @@
                     <navigationItem key="navigationItem" title="Home" id="Rr0-jN-pfn"/>
                     <connections>
                         <outlet property="usernameLabel" destination="HLE-fN-kDe" id="s3L-1U-sfB"/>
-<<<<<<< HEAD
-                        <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="goto_register" id="r8U-2U-yri"/>
-                        <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="I7z-RF-GIa"/>
-                        <segue destination="C1z-Cv-wYj" kind="presentation" identifier="goto_promo" id="UzB-lZ-kfc"/>
-=======
                         <segue destination="Tsi-Ln-Hp1" kind="presentation" identifier="goto_login" id="XZU-ml-kNY"/>
                         <segue destination="CNm-p2-BuE" kind="presentation" identifier="goto_promo" id="9ZR-GQ-SXh"/>
                         <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="goto_register" id="8OW-tV-Hmg"/>
->>>>>>> dev
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUM-le-vef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2435.625" y="-157.3943661971831"/>
         </scene>
-<<<<<<< HEAD
-        <!--View Controller-->
-        <scene sceneID="jY8-d1-j3p">
-            <objects>
-                <viewController id="C1z-Cv-wYj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ra3-Pv-1kI"/>
-                        <viewControllerLayoutGuide type="bottom" id="sEa-FE-I3I"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6wX-A7-mQb" customClass="PromoViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promo Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbb-Ze-pvy">
-                                <rect key="frame" x="16" y="177" width="288" height="30"/>
-=======
         <!--Promo View Controller-->
         <scene sceneID="SgR-69-izY">
             <objects>
@@ -101,38 +79,11 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Turtle's Code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-Jz-Tkk">
                                 <rect key="frame" x="16" y="197" width="288" height="30"/>
->>>>>>> dev
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-qv-dfr">
-                                <rect key="frame" x="16" y="302" width="288" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1414765029" green="0.17031128279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="UJJ-Wh-7V8" kind="presentation" identifier="promo_to_register" id="Y8T-Hz-phP"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkS-8d-fcV">
-                                <rect key="frame" x="135" y="69" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z72-tm-hdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3050.625" y="640.14084507042253"/>
-=======
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5y-L7-MlK">
                                 <rect key="frame" x="16" y="248" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,7 +110,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2775" y="626.4084507042254"/>
->>>>>>> dev
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Kfc-FW-ye4">
@@ -456,14 +406,8 @@
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="98y-8u-Q6k"/>
-        <segue reference="r8U-2U-yri"/>
-        <segue reference="icl-Te-5io"/>
-=======
         <segue reference="gFH-zn-enz"/>
         <segue reference="UxL-A8-Lku"/>
         <segue reference="5Ke-6W-eUH"/>
->>>>>>> dev
     </inferredMetricsTieBreakers>
 </document>
