@@ -300,6 +300,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Forward"/>
                                         <connections>
                                             <action selector="moveForwardWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-FC-DSr"/>
                                         </connections>
