@@ -69,8 +69,8 @@
 		4B44AE561DA9E1CE00CE8448 /* RobotPets */ = {
 			isa = PBXGroup;
 			children = (
-				4B35923F1DE637A9006D9E02 /* Images.xcassets */,
 				4BA2C4031DDBC1050079E0FF /* Main.storyboard */,
+				4B35923F1DE637A9006D9E02 /* Images.xcassets */,
 				4B1567701DDFAED2009B8578 /* PromoViewController.swift */,
 				4B5C6DCC1DD27C6100C70610 /* LoginViewController.swift */,
 				4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */,
