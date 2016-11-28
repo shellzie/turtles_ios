@@ -213,9 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="-32" title="Turtle Profile" image="turtle_icon" selectedImage="turtle_icon" id="JfD-Y7-qMW">
-                        <inset key="imageInsets" minX="122" minY="121" maxX="116" maxY="118"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Turtle Profile" image="turtle_icon" selectedImage="turtle_icon" id="JfD-Y7-qMW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="059-DW-hYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,9 +405,7 @@
                             <constraint firstItem="aJZ-xw-Gs9" firstAttribute="centerX" secondItem="i1c-oe-K4z" secondAttribute="centerX" id="wrE-6H-Y9p"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon" id="Yat-JT-Gsj">
-                        <inset key="imageInsets" minX="43" minY="27" maxX="42" maxY="19"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon" id="Yat-JT-Gsj"/>
                     <connections>
                         <outlet property="imageView" destination="i1c-oe-K4z" id="Yia-gr-QRY"/>
                     </connections>
