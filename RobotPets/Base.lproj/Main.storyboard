@@ -49,7 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="PB7-2v-zwo"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="PB7-2v-zwo"/>
                     <navigationItem key="navigationItem" title="Home" id="Rr0-jN-pfn"/>
                     <connections>
                         <outlet property="usernameLabel" destination="HLE-fN-kDe" id="s3L-1U-sfB"/>
@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Turtle Profile" selectedImage="turtle_512" id="JfD-Y7-qMW">
+                    <tabBarItem key="tabBarItem" tag="-32" title="Turtle Profile" image="turtle_icon" selectedImage="turtle_icon" id="JfD-Y7-qMW">
                         <inset key="imageInsets" minX="122" minY="121" maxX="116" maxY="118"/>
                     </tabBarItem>
                 </viewController>
@@ -407,7 +407,7 @@
                             <constraint firstItem="aJZ-xw-Gs9" firstAttribute="centerX" secondItem="i1c-oe-K4z" secondAttribute="centerX" id="wrE-6H-Y9p"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="home_128" id="Yat-JT-Gsj">
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon" id="Yat-JT-Gsj">
                         <inset key="imageInsets" minX="43" minY="27" maxX="42" maxY="19"/>
                     </tabBarItem>
                     <connections>
@@ -441,11 +441,11 @@
         <image name="camera_circle" width="900" height="900"/>
         <image name="default_image" width="754" height="595"/>
         <image name="forward" width="70" height="70"/>
-        <image name="home_128" width="128" height="128"/>
+        <image name="home_icon" width="44" height="44"/>
         <image name="reverse" width="70" height="70"/>
         <image name="rotate_left" width="70" height="70"/>
         <image name="rotate_right" width="70" height="70"/>
-        <image name="turtle_512" width="512" height="512"/>
+        <image name="turtle_icon" width="51" height="44"/>
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
