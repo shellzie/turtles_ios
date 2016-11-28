@@ -49,6 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Main" id="PB7-2v-zwo"/>
                     <navigationItem key="navigationItem" title="Home" id="Rr0-jN-pfn"/>
                     <connections>
                         <outlet property="usernameLabel" destination="HLE-fN-kDe" id="s3L-1U-sfB"/>
@@ -109,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgy-7R-7o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2775" y="626.4084507042254"/>
+            <point key="canvasLocation" x="-2588" y="631"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Kfc-FW-ye4">
@@ -199,6 +200,46 @@
             </objects>
             <point key="canvasLocation" x="-1695" y="566.19718309859161"/>
         </scene>
+        <!--Turtle Profile-->
+        <scene sceneID="dwo-HJ-cpU">
+            <objects>
+                <viewController id="Ndz-SX-Z6g" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IaS-Mp-s3c"/>
+                        <viewControllerLayoutGuide type="bottom" id="0E4-UR-4eJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5eU-uz-24u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Turtle Profile" selectedImage="turtle_512" id="JfD-Y7-qMW">
+                        <inset key="imageInsets" minX="122" minY="121" maxX="116" maxY="118"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="059-DW-hYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3347" y="2004"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hLx-bt-tzq">
+            <objects>
+                <tabBarController id="7Tz-OX-WYB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TIc-PE-bhq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Uqe-CD-sMV" kind="relationship" relationship="viewControllers" id="Hhj-fg-6N5"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qlh-0g-hBL"/>
+                        <segue destination="Ndz-SX-Z6g" kind="relationship" relationship="viewControllers" id="gSM-0V-1oE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYL-71-ZuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3713" y="916"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="1f2-9L-mgt">
             <objects>
@@ -280,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="-1057.5" y="-335.91549295774649"/>
         </scene>
-        <!--Robot View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RobotViewController" customModule="RobotPets" customModuleProvider="target" sceneMemberID="viewController">
@@ -293,16 +334,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJZ-xw-Gs9">
-                                <rect key="frame" x="-4" y="271" width="328" height="297"/>
+                                <rect key="frame" x="-4" y="222" width="328" height="297"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-CB-HOq">
-                                        <rect key="frame" x="130" y="25" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="forward"/>
-                                        <connections>
-                                            <action selector="moveForwardWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-FC-DSr"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXJ-4T-Ifw">
                                         <rect key="frame" x="53" y="118" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -354,6 +387,14 @@
                                     <action selector="saveImageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rE-5a-xgD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-CB-HOq">
+                                <rect key="frame" x="125" y="272" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="forward"/>
+                                <connections>
+                                    <action selector="moveForwardWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-FC-DSr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -365,13 +406,16 @@
                             <constraint firstItem="aJZ-xw-Gs9" firstAttribute="centerX" secondItem="i1c-oe-K4z" secondAttribute="centerX" id="wrE-6H-Y9p"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="home_128" id="Yat-JT-Gsj">
+                        <inset key="imageInsets" minX="43" minY="27" maxX="42" maxY="19"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="imageView" destination="i1c-oe-K4z" id="Yia-gr-QRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204.375" y="-80.281690140845072"/>
+            <point key="canvasLocation" x="-2694" y="1312"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8RV-XO-Ngm">
@@ -396,14 +440,16 @@
         <image name="camera_circle" width="900" height="900"/>
         <image name="default_image" width="754" height="595"/>
         <image name="forward" width="70" height="70"/>
+        <image name="home_128" width="128" height="128"/>
         <image name="reverse" width="70" height="70"/>
         <image name="rotate_left" width="70" height="70"/>
         <image name="rotate_right" width="70" height="70"/>
+        <image name="turtle_512" width="512" height="512"/>
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gFH-zn-enz"/>
-        <segue reference="UxL-A8-Lku"/>
-        <segue reference="V7B-Dh-3aT"/>
+        <segue reference="Hhj-fg-6N5"/>
+        <segue reference="8OW-tV-Hmg"/>
+        <segue reference="XZU-ml-kNY"/>
     </inferredMetricsTieBreakers>
 </document>
