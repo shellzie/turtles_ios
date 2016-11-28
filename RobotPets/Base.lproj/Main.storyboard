@@ -193,7 +193,7 @@
                         <outlet property="password" destination="mae-az-6TT" id="aRY-BR-PsB"/>
                         <outlet property="passwordConfirmation" destination="beZ-Ut-cab" id="ZJS-tg-Ky8"/>
                         <outlet property="promo" destination="7k0-f5-aZu" id="WFl-ee-zdq"/>
-                        <segue destination="Uqe-CD-sMV" kind="presentation" identifier="registration_to_home" id="icl-Te-5io"/>
+                        <segue destination="7Tz-OX-WYB" kind="presentation" identifier="registration_to_home" id="fwe-kq-DYS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYs-H7-cbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,14 +225,15 @@
         <scene sceneID="hLx-bt-tzq">
             <objects>
                 <tabBarController id="7Tz-OX-WYB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IXO-Dm-97d"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="TIc-PE-bhq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Uqe-CD-sMV" kind="relationship" relationship="viewControllers" id="Hhj-fg-6N5"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qlh-0g-hBL"/>
+                        <segue destination="Uqe-CD-sMV" kind="relationship" relationship="viewControllers" id="Hhj-fg-6N5"/>
                         <segue destination="Ndz-SX-Z6g" kind="relationship" relationship="viewControllers" id="gSM-0V-1oE"/>
                     </connections>
                 </tabBarController>
@@ -314,7 +315,7 @@
                         <outlet property="email" destination="1pB-Di-g5M" id="F0c-mH-OnX"/>
                         <outlet property="password" destination="nKd-mV-ea6" id="dzo-cE-dcF"/>
                         <outlet property="promo" destination="91c-M7-TuU" id="rS6-a6-gdn"/>
-                        <segue destination="Uqe-CD-sMV" kind="presentation" identifier="login_to_home" id="gFH-zn-enz"/>
+                        <segue destination="7Tz-OX-WYB" kind="presentation" identifier="login_to_home" id="Bid-EK-Jmv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsk-LS-eZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,7 +429,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Uqe-CD-sMV" kind="relationship" relationship="rootViewController" id="jrC-Qc-bdz"/>
+                        <segue destination="7Tz-OX-WYB" kind="relationship" relationship="rootViewController" id="i4e-Gu-BfL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owR-Kf-1D6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -448,7 +449,7 @@
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hhj-fg-6N5"/>
+        <segue reference="fwe-kq-DYS"/>
         <segue reference="8OW-tV-Hmg"/>
         <segue reference="XZU-ml-kNY"/>
     </inferredMetricsTieBreakers>

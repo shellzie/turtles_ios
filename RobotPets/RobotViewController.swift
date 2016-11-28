@@ -60,56 +60,40 @@ class RobotViewController: UIViewController {
             }
         }
     }
-    
-//    @IBAction func stopCamera(sender: UIButton) {
-//        myTimer?.invalidate()
-//        myTimer = nil
-//    }
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
         setupAnimationLayer()
-        
-//        setupPhotoPolling()
-//        backgroundFetch()
-//        Timer.scheduledTimer(withTimeInterval: 5, repeats: true, )
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(RobotViewController.backgroundFetch), userInfo: nil, repeats: true)
 
     }
     
     func setupAnimationLayer() {
-        
         flashView = UIView(frame: CGRect.init(x: 0, y: -6, width: imageView.frame.width, height: imageView.frame.height))
         flashView.alpha = 0
         flashView.backgroundColor = UIColor.black
         imageView.addSubview(flashView)
     }
     
-    
     func backgroundFetch() {
-        let queue = DispatchQueue.global(qos: DispatchQoS.utility.qosClass)
-        queue.async {
-            self.getNextFrame()
-            
-            DispatchQueue.main.async(execute: {
-                self.imageView.image = self.store.lastPhoto
-            })
-//            DispatchQueue.main.async(deadline: DispatchTime.now() + .seconds(5)) {
-//                self.imageView.image = self.store.lastPhoto
-//            }
+        if (self.tabBarController?.selectedIndex == 0) {
+            let queue = DispatchQueue.global(qos: DispatchQoS.utility.qosClass)
+            queue.async {
+                self.getNextFrame()
+                DispatchQueue.main.async(execute: {
+                    self.imageView.image = self.store.lastPhoto
+                })
+            }
         }
     }
 
     func setupPhotoPolling() {
-    
         let myTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RobotViewController.getNextFrame as (RobotViewController) -> () -> ()), userInfo: nil, repeats: true)
         RunLoop.current.add(myTimer, forMode: RunLoopMode.init(rawValue: "photo"))
-//        RunLoop.current.add(timer, forMode: RunLoop.current.currentMode)
     }
  
     func getNextFrame() {
-        print("+++++++++++ getNextFrame() was called ++++++++++++")
         self.store.fetchRecentPhoto()
 
     }
