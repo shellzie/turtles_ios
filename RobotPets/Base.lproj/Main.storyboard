@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Turtle Profile" image="turtle_icon" selectedImage="turtle_icon" id="JfD-Y7-qMW"/>
+                    <tabBarItem key="tabBarItem" title="Turtle Profile" image="turtle" selectedImage="turtle" id="JfD-Y7-qMW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="059-DW-hYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,8 +230,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qlh-0g-hBL"/>
                         <segue destination="Uqe-CD-sMV" kind="relationship" relationship="viewControllers" id="Hhj-fg-6N5"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qlh-0g-hBL"/>
                         <segue destination="Ndz-SX-Z6g" kind="relationship" relationship="viewControllers" id="gSM-0V-1oE"/>
                     </connections>
                 </tabBarController>
@@ -405,7 +405,7 @@
                             <constraint firstItem="aJZ-xw-Gs9" firstAttribute="centerX" secondItem="i1c-oe-K4z" secondAttribute="centerX" id="wrE-6H-Y9p"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon" id="Yat-JT-Gsj"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="Yat-JT-Gsj"/>
                     <connections>
                         <outlet property="imageView" destination="i1c-oe-K4z" id="Yia-gr-QRY"/>
                     </connections>
@@ -419,11 +419,11 @@
         <image name="camera_circle" width="900" height="900"/>
         <image name="default_image" width="754" height="595"/>
         <image name="forward" width="70" height="70"/>
-        <image name="home_icon" width="44" height="44"/>
+        <image name="home" width="22" height="22"/>
         <image name="reverse" width="70" height="70"/>
         <image name="rotate_left" width="70" height="70"/>
         <image name="rotate_right" width="70" height="70"/>
-        <image name="turtle_icon" width="51" height="44"/>
+        <image name="turtle" width="23" height="23"/>
         <image name="turtle_promo_page" width="182" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
