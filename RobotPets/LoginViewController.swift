@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
         } else if !self.isValidPassword(str: password) {
             self.createAlertWindow(titleStr:"Error with password!", msgStr:"Please enter a password containing at least 6 characters")
         } else {
-            let components = NSURLComponents(string: API.herokuURLString + "/ios_login")
+            let components = NSURLComponents(string: API.herokuURL + "/ios_login")
             let paramString = "email=\(email)&password=\(password)"
             let url = components?.url
             let request = NSMutableURLRequest(url: url! as URL)

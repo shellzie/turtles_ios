@@ -70,7 +70,7 @@ class RegisterViewController: UIViewController {
         } else if (password != password_confirm) {
             self.createAlertWindow(titleStr: "Passwords do not match", msgStr: "Please enter the same password twice")
         } else {
-            let components = NSURLComponents(string: API.herokuURLString + "/ios_register")
+            let components = NSURLComponents(string: API.herokuURL + "/ios_register")
             let paramString = "email=\(email)&password=\(password)&password_confirmation=\(password_confirm)"
             let url = components?.url
             let request = NSMutableURLRequest(url: url! as URL)

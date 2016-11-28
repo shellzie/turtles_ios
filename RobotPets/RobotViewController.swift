@@ -62,11 +62,9 @@ class RobotViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setupAnimationLayer()
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(RobotViewController.backgroundFetch), userInfo: nil, repeats: true)
-
     }
     
     func setupAnimationLayer() {
@@ -77,7 +75,7 @@ class RobotViewController: UIViewController {
     }
     
     func backgroundFetch() {
-        if (self.tabBarController?.selectedIndex == 0) {
+        if ((self.tabBarController?.selectedIndex == 0) && (API.isTurtleConnected())) {
             let queue = DispatchQueue.global(qos: DispatchQoS.utility.qosClass)
             queue.async {
                 self.getNextFrame()
@@ -94,6 +92,7 @@ class RobotViewController: UIViewController {
     }
  
     func getNextFrame() {
+        print("++++++++++++ in getNextFrame")
         self.store.fetchRecentPhoto()
 
     }

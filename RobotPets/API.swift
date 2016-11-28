@@ -16,17 +16,16 @@ let session: URLSession = {
 
 struct API {
     #if DEBUG
-        static let herokuURLString = "http://localhost:3000"
+        static let herokuURL = "http://localhost:3000"
     #else
-        static let herokuURLString = "https://robot-pets-api.herokuapp.com"
+        static let herokuURL = "https://robot-pets-api.herokuapp.com"
     #endif
     
-    private static let baseURLString = "http://benbot.local/robot.py"
-//    let herokuURLString = #DEBUG ? "http://localhost:3000" : "https://robot-pets-api.herokuapp.com"
+    private static let turtleURL = "http://benbot.local"
     
     //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
     static func sendNavCommand(parameters: [String:String]?) {
-        let components = NSURLComponents(string: baseURLString)!
+        let components = NSURLComponents(string: turtleURL + "/robot.py")!
         var queryItems = [NSURLQueryItem]()
         if let queryParams = parameters {
             for (key, value) in queryParams {
@@ -45,37 +44,39 @@ struct API {
         }
         task.resume()
     }
-    
-    //called from RobotViewController only use method for POST commands because otherwise we wouldn't use NSMutableURLRequest (for GET we use NSURLRequest)
-//    static func queryDatabase(parameters: [String:String]?) {
-//        let components = NSURLComponents(string: herokuURLString)
-//        var paramString = ""
-//        for (key, value) in parameters! {
-//            let pair = key + "=" + value + "&"
-//            paramString += pair
-//        }
-//        let url = components?.url
-//        let request = NSMutableURLRequest(url: url! as URL)
-//        request.httpMethod = "POST"
-//        request.httpBody = paramString.data(using: String.Encoding.utf8);
-//        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> () in
-//            print("++++++++++++++++++ Response is \(response) ")
-//            print("++++++++++++++++++ Error is \(error) ")
-//            print("++++++++++++++++++ Data is \(data) ")
-//            
-//            if (response.statusCode >= 200 && response.statusCode < 300) {
-//                
-//            }
-//            else if
-//        
-//        }
-//        task.resume()
-//    }
-    
 
     static func cameraURL() -> NSURL? {
-        let urlString = "http://benbot.local/motion/robotView.jpg"
+        let urlString = turtleURL + "/motion/robotView.jpg"
         let url = NSURL(string: urlString)
         return url
     }
+    
+    static func isTurtleConnected()->Bool{
+        
+        let url = NSURL(string: turtleURL + "/robot.py")
+        let request = NSMutableURLRequest(url: url as! URL)
+        request.httpMethod = "HEAD"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
+        request.timeoutInterval = 10.0
+        
+        var result:Bool = false
+        
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> () in
+            if (response == nil) {
+                result = false
+            }
+            else {
+                let resp = response as! HTTPURLResponse
+                result = (resp.statusCode == 200)
+            }
+            
+            print("++++++++++++++++++ Response is \(response) ")
+            print("++++++++++++++++++ Error is \(error) ")
+            print("++++++++++++++++++ Data is \(data) ")
+        }
+        task.resume()
+        print("istutrltconnection returned " + result.description)
+        return result
+    }
+    
 }
