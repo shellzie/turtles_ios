@@ -19,7 +19,7 @@
 		4B5C6DCF1DD27E3A00C70610 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */; };
 		4B8CE38D1DEF678F00F24F7D /* TurtleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CE38C1DEF678F00F24F7D /* TurtleProfileViewController.swift */; };
 		4B8CE38F1DEF6A7800F24F7D /* TurtlePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CE38E1DEF6A7800F24F7D /* TurtlePhotoViewController.swift */; };
-		4BA2C4051DDBC1050079E0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BA2C4031DDBC1050079E0FF /* Main.storyboard */; };
+		4BDE1CCB1DEF961F007CFE1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDE1CCA1DEF961F007CFE1A /* Main.storyboard */; };
 		4BEE27681DDED9D9009328A1 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE27671DDED9D9009328A1 /* PromoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4B8CE38C1DEF678F00F24F7D /* TurtleProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurtleProfileViewController.swift; sourceTree = "<group>"; };
 		4B8CE38E1DEF6A7800F24F7D /* TurtlePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurtlePhotoViewController.swift; sourceTree = "<group>"; };
-		4BA2C4041DDBC1050079E0FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BDE1CCA1DEF961F007CFE1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		4BEE27671DDED9D9009328A1 /* PromoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,12 +73,12 @@
 		4B44AE561DA9E1CE00CE8448 /* RobotPets */ = {
 			isa = PBXGroup;
 			children = (
-				4BA2C4031DDBC1050079E0FF /* Main.storyboard */,
 				4B35923F1DE637A9006D9E02 /* Images.xcassets */,
 				4B1567701DDFAED2009B8578 /* PromoViewController.swift */,
 				4B5C6DCC1DD27C6100C70610 /* LoginViewController.swift */,
 				4B5C6DCE1DD27E3A00C70610 /* RegisterViewController.swift */,
 				4B44AE631DA9E1CE00CE8448 /* Info.plist */,
+				4BDE1CCA1DEF961F007CFE1A /* Main.storyboard */,
 				4B44AE571DA9E1CE00CE8448 /* AppDelegate.swift */,
 				4B1B9E5E1DB56ACA00CF0A63 /* Photo.swift */,
 				4B1B9E821DB5C82100CF0A63 /* PhotoManager.swift */,
@@ -154,8 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BDE1CCB1DEF961F007CFE1A /* Main.storyboard in Resources */,
 				4B3592401DE637A9006D9E02 /* Images.xcassets in Resources */,
-				4BA2C4051DDBC1050079E0FF /* Main.storyboard in Resources */,
 				4B44AE621DA9E1CE00CE8448 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,14 +190,6 @@
 				4B44AE611DA9E1CE00CE8448 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4BA2C4031DDBC1050079E0FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BA2C4041DDBC1050079E0FF /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
