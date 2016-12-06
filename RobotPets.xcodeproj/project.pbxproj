@@ -58,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				4B44AE561DA9E1CE00CE8448 /* RobotPets */,
-				4B44AE551DA9E1CE00CE8448 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +67,7 @@
 				4B44AE541DA9E1CE00CE8448 /* RobotPets.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4B44AE561DA9E1CE00CE8448 /* RobotPets */ = {
@@ -89,6 +89,7 @@
 				4BEE27671DDED9D9009328A1 /* PromoViewController.swift */,
 				4B8CE38C1DEF678F00F24F7D /* TurtleProfileViewController.swift */,
 				4B8CE38E1DEF6A7800F24F7D /* TurtlePhotoViewController.swift */,
+				4B44AE551DA9E1CE00CE8448 /* Products */,
 			);
 			path = RobotPets;
 			sourceTree = "<group>";
