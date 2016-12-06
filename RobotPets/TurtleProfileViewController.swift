@@ -26,8 +26,8 @@ class TurtleProfileViewController: UITableViewController {
         
 //        let optionMenu = UIAlertController(title: nil, message: "", preferredStyle: .actionSheet)
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let deleteAction = UIAlertAction(title: "Take Photo", style: .default)
-        let saveAction = UIAlertAction(title: "Choose from Library", style: .default)
+        let deleteAction = UIAlertAction(title: "Take photo", style: .default)
+        let saveAction = UIAlertAction(title: "Choose existing photo", style: .default)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
         optionMenu.addAction(deleteAction)
