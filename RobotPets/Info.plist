@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Select photo from Photo Library to use as turtle profile photo</string>
+	<string>Select photo for your turtle&apos;s profile photo</string>
 	<key>NSCameraUsageDescription</key>
-	<string>User camera image as turtle profile photo</string>
+	<string>Take photo for your turtle&apos;s profile photo</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
