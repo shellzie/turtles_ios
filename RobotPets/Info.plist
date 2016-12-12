@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Save user selected images to PhotoLibrary</string>
+	<string>Select photo from Photo Library to use as turtle profile photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>User camera image as turtle profile photo</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TurtlePhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ChildTurtlePhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
 //    let imagePicker = UIImagePickerController()
@@ -23,8 +23,23 @@ class TurtlePhotoViewController: UIViewController, UINavigationControllerDelegat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func showActionSheet(sender: UIButton) {
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let photoAction = UIAlertAction(title: "Take Photo", style: .default, handler: {action in self.openCamera(sender: UIButton.self)})
+        let libraryAction = UIAlertAction(title: "Choose existing photo", style: .default, handler: {action in self.openPhotoLibrary(sender: UIButton.self)})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        optionMenu.addAction(photoAction)
+        optionMenu.addAction(libraryAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+    }
 
-    @IBAction func openCameraButton(sender: UIButton) {
+
+    func openCamera(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -34,7 +49,7 @@ class TurtlePhotoViewController: UIViewController, UINavigationControllerDelegat
         }
     }
     
-    @IBAction func openPhotoLibraryButton(sender: UIButton) {
+    func openPhotoLibrary(sender: AnyObject) {
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
