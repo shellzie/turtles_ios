@@ -11,7 +11,8 @@ import UIKit
 class ChildTurtlePhotoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-//    let imagePicker = UIImagePickerController()
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var birthdate: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,6 @@ class ChildTurtlePhotoViewController: UIViewController, UINavigationControllerDe
         self.present(optionMenu, animated: true, completion: nil)
     }
 
-
     func openCamera(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
@@ -50,7 +50,6 @@ class ChildTurtlePhotoViewController: UIViewController, UINavigationControllerDe
     }
     
     func openPhotoLibrary(sender: AnyObject) {
-        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self

@@ -15,7 +15,7 @@ let session: URLSession = {
 }()
 
 struct API {
-    #if DEBUG && TARGET_IPHONE_SIMULATOR
+    #if DEBUG || TARGET_IPHONE_SIMULATOR
         static let herokuURL = "http://localhost:3000"
     #else
         static let herokuURL = "https://robot-pets-api.herokuapp.com"
