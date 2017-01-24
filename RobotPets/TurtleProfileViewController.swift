@@ -89,9 +89,9 @@ class TurtleProfileViewController: UITableViewController {
         //validate turtle's name (ie. must be present)
         
         let prefs:UserDefaults = UserDefaults.standard
-        let user_email = prefs.value(forKey: "EMAIL")
+        let user_email = prefs.value(forKey: "EMAIL")!
         
-        let name = "michellesturtle4"
+        let name = "michellesturtle10"
         
         
         
