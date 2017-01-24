@@ -22,7 +22,6 @@ class TurtleProfileViewController: UITableViewController {
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(doneTapped))
         self.navigationItem.leftBarButtonItem = doneButton
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,7 +76,7 @@ class TurtleProfileViewController: UITableViewController {
 //    }
 // 
     @objc private func doneTapped(sender: UIButton) {
-        let bio:String = self.bio.text!
+//        let bio:String = self.bio.text!
         let hobbies:String = self.hobbies.text!
         let color:String = self.color.text!
         let dances:String = self.dances.text!
@@ -89,8 +88,15 @@ class TurtleProfileViewController: UITableViewController {
         
         //validate turtle's name (ie. must be present)
         
+        let prefs:UserDefaults = UserDefaults.standard
+        let user_email = prefs.value(forKey: "EMAIL")
+        
+        let name = "michellesturtle4"
+        
+        
+        
         let components = NSURLComponents(string: API.herokuURL + "/ios_turtle_profile")
-        let paramString = "bio=\(bio)&hobbies=\(hobbies)&color=\(color)&dances=\(dances)&music=\(music)&phrase=\(phrase)"
+        let paramString = "name=\(name)&user_email=\(user_email)&hobbies=\(hobbies)&color=\(color)&dances=\(dances)&music=\(music)&phrase=\(phrase)"
         let url = components?.url
         let request = NSMutableURLRequest(url: url! as URL)
         request.httpMethod = "POST"

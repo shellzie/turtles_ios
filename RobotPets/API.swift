@@ -44,15 +44,46 @@ struct API {
         }
         task.resume()
     }
-
+    
+//    static func getUserId(str:String) -> Int {
+//        
+//        let components = NSURLComponents(string: herokuURL + "/ios_userid")!
+//
+//        let paramString = "email=\(str)"
+//        let url = components.url
+//        let request = NSMutableURLRequest(url: url! as URL)
+//        request.httpMethod = "GET"
+//        request.httpBody = paramString.data(using: String.Encoding.utf8);
+//        
+//        var result = 0
+//        let task = session.dataTask(with: request as URLRequest) { (data, response, error) -> () in
+//            print("++++++++++++++++++ Response is \(response) ")
+//            print("++++++++++++++++++ Error is \(error) ")
+//            print("++++++++++++++++++ Data is \(data) ")
+//            let resp = response as! HTTPURLResponse
+//            
+//            if (resp.statusCode >= 200 && resp.statusCode < 300) {
+//                print("+++++ SUCCESS+++++")
+//                result = (response?.hashValue)!
+//            
+//                
+//            }
+//            else {
+//                print("ERROR finding user id from email")
+//                
+//            }
+//        }
+//        task.resume()
+//        return result
+//    }
+    
     static func cameraURL() -> NSURL? {
         let urlString = turtleURL + "/motion/robotView.jpg"
         let url = NSURL(string: urlString)
         return url
     }
     
-    static func isTurtleConnected()->Bool{
-        
+    static func isTurtleConnected()->Bool {
         let url = NSURL(string: turtleURL + "/robot.py")
         let request = NSMutableURLRequest(url: url as! URL)
         request.httpMethod = "HEAD"
@@ -78,5 +109,6 @@ struct API {
         print("istutrltconnection returned " + result.description)
         return result
     }
+
     
 }

@@ -12,7 +12,7 @@ class ChildTurtlePhotoViewController: UIViewController, UINavigationControllerDe
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var birthdate: UITextField!
+    @IBOutlet weak var bio: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
